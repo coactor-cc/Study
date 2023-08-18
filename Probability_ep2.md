@@ -63,7 +63,7 @@ $$
 ## 离散型随机变量
 通常就将有限个点映射到整数了1，2，3，4，5  
 将数列化为离散型随机变量X的分布率
-### 概率分布|分布率
+### 分布率
 概率1以一定的规律分布在各个可能的值上  
 P{X=k}=pk,k=1,2,3,4...
 $$
@@ -117,41 +117,130 @@ X表示n重伯努利试验**首次出现结果$e_2$的试验次数**
 $$  
 P\{ X=k \}=(1-p)^{k-1}p
 $$
-## 泊松分布
+## 泊松分布P($\lambda$)
 n→$\infty$时n重伯努利试验引出的分布？  
 X表示n重伯努利试验**结果$e_2$出现的次数**  
 **推导** 假定伯努利试验中事件发生概率与事件1/n成正比`类平均分布`，记为$\frac{\lambda}{n}$，则
 $$
-\lim_{n\rightarrow \infty}P\{ X=k \}=C_n^k(\frac{\lambda}{n})^k(1-\frac{\lambda}{n})^{n-k}\\
-=\lim_{n\rightarrow \infty}\frac{n(n-1)\cdots(n-k+1)}{k!n^{k}}\lambda^{k}\cdot(1-\frac{\lambda}{n})^{n}\cdot(1-\frac{\lambda}{n})^{-k}\\
-=\frac{\lambda^{k}}{k!}\cdot\lim_{n\rightarrow \infty}(1-\frac{\lambda}{n})^{n}\cdot(1-\frac{\lambda}{n})^{-k}\\
-=\frac{\lambda^{k}}{k!}\cdot{\rm e}^{\lim_{n\rightarrow \infty}n\cdot(-\frac{\lambda}{n})}\cdot 1\\
-=\frac{\lambda^{k}{\rm e}^{-\lambda}}{k!}
+\begin{aligned}
+\lim_{n\rightarrow \infty}P\{ X=k \}&=C_n^k(\frac{\lambda}{n})^k(1-\frac{\lambda}{n})^{n-k}\\
+&=\lim_{n\rightarrow \infty}\frac{n(n-1)\cdots(n-k+1)}{k!n^{k}}\lambda^{k}\cdot(1-\frac{\lambda}{n})^{n}\cdot(1-\frac{\lambda}{n})^{-k}\\
+&=\frac{\lambda^{k}}{k!}\cdot\lim_{n\rightarrow \infty}(1-\frac{\lambda}{n})^{n}\cdot(1-\frac{\lambda}{n})^{-k}\\
+&=\frac{\lambda^{k}}{k!}\cdot{\rm e}^{\lim_{n\rightarrow \infty}n\cdot(-\frac{\lambda}{n})}\cdot 1\\
+&=\frac{\lambda^{k}{\rm e}^{-\lambda}}{k!}
+\end{aligned}
 $$
 
+泊松过程中，  
+
+X~P($\lambda t$)
+
 ## 连续型随机变量
-### 概率密度函数|概率密度
-xxx
+### 概率密度函数
+由分布函数定义出来？？？，并不是f(x)=P{X=k}这个就全为0了  
+
+分布函数的导函数-相当于分布函数的斜率
 $$
-f(x)=P{X=x}
+F(x)=\int_{-\infty}^{x}f(x){\rm d}x
+$$
+#### 性质
+1.f(x)>0  
+2.面积=1  
+3.P{a<X≤b}=$\int_{x_1}^{x_2}f(x){\rm d}x$  
+4.f(x)若连续，则F'(x)=f(x)  
+$$
+f(x)=\lim_{\Delta x\rightarrow 0^{+}}
+\frac{F(x+\Delta x)-F(x)}{\Delta x}\\
+=\lim_{\Delta x\rightarrow 0^{+}}
+\frac{P\{ x<X\leq x+\Delta x \}}{\Delta x}\\
+\therefore P\{ x<X\leq x+\Delta x \}\approx f(x)\Delta x
 $$
 ### 分布函数
+根据高数，可积必**连续**
 $$
-F(x)=\int_{-\infty}^{x}f(t){\rm d}t
+F(x)=P\{X\leq x\}=\int_{-\infty}^{x}f(t){\rm d}t
 $$
-根据高数，可积必连续
+
 ### 泊松过程
+计数过程：  
+#### 条件
+独立增量性(independent increments): 在不相交的时间区间里，随机事件发生情况是独立的；   
+平稳性(stationary): 在相同时间长度内，随机事件数的分布是一致的.  
+普通性 在极小区间内，只能有一个事件发生
+
 （1）平稳性 对于时间段$[t_0,t_0+t)$内发生的呼叫次数只与t有关而与$t_0$无关。而且$\forall t$，记$P_i(t)$为时长t的时间里发生了i次呼叫的概率，那么有$\sum_{i=1}^{n}P_i(t)=1
 
 （2）独立增量性（无后效性） 对于时间段 $[t_0,t_0+t)$内发生的呼叫次数与$t_0$以前发生的事件都相互独立，且在互不相交的时间区间内事件发生是相互独立的
 
-（3）普通性 在充分小的时间间隔内，最多来一个呼叫。即
+(3)普通性$\lim_{t\rightarrow 0}\frac{P_i(t)}{t}=1$
+### 均匀分布U(a,b)
+#### 概率密度
 $$
-\lim_{t\rightarrow 0}\frac{P_i(t)}{t}=1
-$$ 
- 。在这个条件下，意味着同时进来两个或以上的通话是不可能的。
-## 均分布 
+f(x)=
+\begin{cases}
+\begin{aligned}
+&\frac{1}{b-a},&&a<x<b,\\
+&0,&&\text{其他},
+\end{aligned}
+\end{cases}
+$$
+#### 分布函数
+$$
+F(x)=
+\begin{cases}
+\begin{aligned}
+&0,&&x<a,\\
+&\frac{x-a}{b-a},&&a\leq x<b,\\
+&1,&&x\geq b,
+\end{aligned}
 
-## 指数分布
+\end{cases}
+$$
+### 指数分布E($\lambda$)
+泊松过程引出的分布  
+表示泊松计数过程的时间间隔  
+连续型等待分布  
+#### 概率密度
+推导???
+$$
+P(\lambda t)=\frac{{\lambda t}^{k}e^{-\lambda t}}{k!}\\
+P\{ X=0 \}=
+$$
+$$
+f(x)=
+\begin{cases}
+\begin{aligned}
+&\lambda {\rm e}^{-\lambda x},&&x>0,\\
+&0,&&其他,
+\end{aligned}
+\end{cases}
 
-## 正态分布
+$$
+#### 分布函数
+$$
+F(x)=
+\begin{cases}
+\begin{aligned}
+&1-e^{-\lambda x},&&x\geq 0,\\
+&0,&&其他，
+\end{aligned}
+\end{cases}
+$$
+#### 无记忆性
+已经工作十小时，再工作10小时，和工作10小时损坏的概率式一样的，利用指数函数的运算性质
+### 正态分布N($\mu,\sigma^2$)
+#### 概率密度
+$$
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}{\rm e}^{\frac{-(x-\mu)^{2}}{2\sigma^{2}}}
+$$
+#### 标准化和标准正态分布N(0,1)
+$$
+F(x)=P\{X\leq x\}=\Phi(\frac{x-\mu}{\sigma})
+$$
+## 一位`随机变量函数`分布
+### 离散到离散√
+### 连续到连续
+$$
+Y=G(X)\\
+F_Y(y)=P\{Y\leq y\}=P\{G(X)\leq y\}=\sum_{I_x,G(x)<y}^{}\int_{x_i}^{x_{i+1}}f(x){\rm d}x
+$$
