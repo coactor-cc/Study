@@ -12,7 +12,7 @@ a<0,y=\frac{1}{x^{-a}},e.g. y=\frac{1}{x}\\
 \\
 a>1,整数次奇偶性不同
 $$
-![Alt text](%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/images/image.png)
+
 ### 指数函数
 a>1
 1>a>0
@@ -22,19 +22,22 @@ e^x\\
 \lim_{x\rightarrow\infty}e^x=不\exist\\
 \int_{-\infty}^0e^x=1
 $$
-![Alt text](%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/images/image-1.png)
+![Alt text](images/AM_ep1_image-2.png)
+
+
+![Alt text](images/AM_ep1_image-1.png)
 ### 对数函数
 $$
 \lim_{x\rightarrow{0}^+} x^\alpha\ln^\beta x=0,\alpha,\beta >0\\
 \lim_{x\rightarrow+\infty} \frac{\ln^\beta x}{x^\alpha}=0,\alpha,\beta >0\\
 $$
-![Alt text](%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/images/image-2.png)
+
 ### 三角函数 
 周期性 
 $$
 \sec x、\csc x
 $$
-![Alt text](%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/images/image-3.png)
+
 ### 反三角函数
 $$
 \arcsin x+\arccos x=\frac{\pi}{2}\\

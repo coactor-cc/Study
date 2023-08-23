@@ -1,12 +1,26 @@
 # 一元函数积分学
 ## 原函数与不定积分（求导逆过程）
-### 不定积分存在定理
-#### 连续函数必有原函数
+### 原函数存在的判别
+#### 原函数存在定理(充分条件)
+**定理**  设f(x)是在区间I上的连续函数,则
 $$
-proof：设f(x)是在区间I上的连续函数,F(x)=\int_a^xf(x){\rm d}x\\
-F'(x)=\lim_{\Delta x\rightarrow 0}\frac{F(x+\Delta x)-F(x)}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{\int_x^{x+\Delta x}f(t){\rm d}t}{\Delta x}=\lim_{\Delta x\rightarrow 0}\frac{f(\xi)\Delta x}{\Delta x}=\lim_{\xi\rightarrow x}f(\xi)=f(x)
+F(x)=\int_a^xf(x){\rm d}x
 $$
-#### 含有第一类间断点和无穷间断点的函数f(x)在包含间断点的区间没有原函数
+是f(x)的一个原函数  
+**证** 
+$$
+\begin{aligned}
+F'(x)&=\lim_{\Delta x\rightarrow 0}\frac{F(x+\Delta x)-F(x)}{\Delta x}\\
+&=\lim_{\Delta x\rightarrow 0}\frac{\int_x^{x+\Delta x}f(t){\rm d}t}{\Delta x}\\
+&=\lim_{\Delta x\rightarrow 0 \atop \xi\rightarrow x}\frac{f(\xi)\Delta x}{\Delta x}\\
+&=\lim_{\xi\rightarrow x}f(\xi)\\
+&=f(x)
+\end{aligned}
+$$
+####  不存在的情况
+含有第一类间断点和无穷间断点的函数f(x)在包含间断点的区间没有原函数
+
+TODO 画表存在条件  
 **结论掌握,待补充**
 ### 奇偶性分析：
 f(x)是以T为周期的连续函数,  
@@ -54,21 +68,89 @@ $$
 #### 估值定理※
 $M，m分别为f(x)在区间[a,b]上的最大、最小值，有ml\leq \int_a^bf(x){\rm d}x\leq ML$
 #### 中值定理※
-$设f(x)在区间[a,b]上连续，则至少存在一点\xi,使得\int_a^bf(x){\rm d}x=f(\xi)(b-a)$
+设f(x)在区间[a,b]上连续，则至少存在一点$\xi$,使得
 $$
-证明：因为有界，用定积分保号性->估值定理->\\连续函数，介值定理f(\xi)=\frac{\int_a^b f(x){\rm d}x}{b-a}
+\int_a^bf(x){\rm d}x=f(\xi)(b-a)
 $$
-#### 奇偶性 ※？——偶倍奇零
+**证** 因为有界，用定积分保号性->估值定理->  连续函数，介值定理
+TODO   证明
+$$
+f(\xi)=\frac{\int_a^b f(x){\rm d}x}{b-a}
+$$
+#### 奇偶性 ※？——偶倍奇零 对称性
+
+TODO  对称性与区间再现  
 不应该放在定积分里，定积分值为常数吖，放在不定积分里或者变限积分里会比较好
 
-## 变限积分（？？积分函数？？）
-### 定义（积分上限函数）
+### 定积分的计算
+#### 变限积分函数
+##### 定义（积分上限函数）
 
-### 性质
-1. $f(x)在[a,b]可积，则函数F(x)=int_a^bf(x){\rm d}x在[a,b]上连续$
-   证明：利用可积的必要条件
-2. $f(x)在[a,b]连续，则函数F(x)=int_a^bf(x){\rm d}x在[a,b]上可导$
-   
+##### 性质
+**定理1**  $f(x)在[a,b]可积，则函数F(x)=\int_a^bf(x){\rm d}x在[a,b]上连续$
+
+证明：利用可积的必要条件  
+TODO **证** 它  
+**定理2** f(x)在[a,b]连续，则函数$F(x)=\int_a^bf(x){\rm d}x$在[a,b]上可导,且
+$$
+F'(X)=f(x)
+$$
+**证** 
+$$
+\begin{aligned}
+(\int_{\infty}^{x}f(x){\rm d}x)'&=\lim_{\Delta x\rightarrow 0}\frac{\int_{\infty}^{x+\Delta x}f(x){\rm d}x-\int_{\infty}^{x}f(x){\rm d}x}{\Delta x}\\
+&=\lim_{\Delta x\rightarrow 0}\frac{\int_{x}^{x+\Delta x}f(t){\rm d}t}{\Delta x}\\
+&=\lim_{\Delta x\rightarrow 0 \atop \xi\rightarrow x}\frac{f(\xi)\Delta x}{\Delta x}\\
+&=\lim_{\xi\rightarrow x}f(\xi)\\
+&=f(x)
+\end{aligned}
+$$
+## 广义求导公式
+$$
+(\int_{\varphi_1(x)}^{\varphi_2(x)}f(x){\rm d}x)'=f(\varphi_2(x))\varphi_2'(x)-f(\varphi_1(x))\varphi_1'(x)
+$$
+**证** 
+$$
+\because \int_{\varphi_1(x)}^{\varphi_2(x)}f(x){\rm d}x=\int_{\varphi_1(x)}^{a}f(x){\rm d}x+\int_{a}^{\varphi_2(x)}f(x){\rm d}x\\
+=\int_{a}^{\varphi_2(x)}f(x){\rm d}x-\int_{a}^{\varphi_1(x)}f(x){\rm d}x\\
+$$
+设$F(x)=\int_{a}^{x}f(x){\rm d}x$
+$$
+\therefore (\int_{\varphi_1(x)}^{\varphi_2(x)}f(x){\rm d}x)'=F'(\varphi_2(x))-F'(\varphi_1(x))\\
+=f(\varphi_2(x))\varphi_2'(x)-f(\varphi_1(x))\varphi_1'(x)
+$$
+#### 牛顿——莱布尼兹公式
+TODO 证明  
+有一类间断点需要拆分哦  
+有振荡间断点直接用
+#### 定积分的换元积分
+上下限需要反解  
+$$
+e.g.\\
+\int_a^bf(x){\rm d}x 则积分变量区间x=a->x=b\\
+令x=\varphi (t) 则积分变量t的区间怎么来？\\
+\varphi(t)=a , \varphi (t)=b ->反解出t的区间，当然上下限位置不能随意换哦不然符号会错
+$$
+#### 定积分的分部积分
+代入上下限  
+分部积分法可以逆向使用
+#### 定积分的计算性质（奇偶性在定积分计算中的应用）
+积分区间对称（不光0点哦），被积函数偶倍ji0
+#### 区间再现公式
+$$
+\begin{gather}
+证明\\
+\int_a^bf(x){\rm d}x=\\
+令x=a+b-t\\
+=\int_{t_1}^{t_2}f(a+b-t){\rm d}a+b-t\\
+a+b-t_2=b,a+b-t_1=a,得t_1=b，t_2=a\\
+=\int_b^af(a+b-t){\rm d}a+b-t\\
+=\int_a^bf(a+b-t){\rm d}t\\
+\end{gather}
+$$ 
+#### 华里士公式
+
+
 ## 反常积分
 破环了区间的有限性
 ### 无穷限的反常积分
@@ -101,36 +183,7 @@ $$
 4. 三角·三角
 ### 有理函数积分
 ### 计算细节总结
-### 定积分的计算
-#### 牛顿——莱布尼兹公式（应用）
-有一类间断点需要拆分哦  
-有振荡间断点直接用
-#### 定积分的换元积分
-上下限需要反解  
-$$
-e.g.\\
-\int_a^bf(x){\rm d}x 则积分变量区间x=a->x=b\\
-令x=\varphi (t) 则积分变量t的区间怎么来？\\
-\varphi(t)=a , \varphi (t)=b ->反解出t的区间，当然上下限位置不能随意换哦不然符号会错
-$$
-#### 定积分的分部积分
-代入上下限  
-分部积分法可以逆向使用
-#### 定积分的计算性质（奇偶性在定积分计算中的应用）
-积分区间对称（不光0点哦），被积函数偶倍ji0
-#### 区间再现公式
-$$
-\begin{gather}
-证明\\
-\int_a^bf(x){\rm d}x=\\
-令x=a+b-t\\
-=\int_{t_1}^{t_2}f(a+b-t){\rm d}a+b-t\\
-a+b-t_2=b,a+b-t_1=a,得t_1=b，t_2=a\\
-=\int_b^af(a+b-t){\rm d}a+b-t\\
-=\int_a^bf(a+b-t){\rm d}t\\
-\end{gather}
-$$ 
-#### 华里士公式
+
 ## 几何应用
 ### 面积
 #### 直角坐标
