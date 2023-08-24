@@ -29,44 +29,39 @@ TODO
 ### 异常与中断
 见计组
 ### 系统调用
-POSIX-IEEE定义的系统调用标准尊重了Unix
-fork()
-read()
-write()
-open()
-getmessage()  
+POSIX-IEEE定义的系统调用标准尊重了Unix  
+fork()、read()、write()、open()、getmessage()  
 #### ~~接口~~
 命令行、图形化界面、应用程序
 #### ~~命令行与shell~~
 命令是一段程序
-gcc
 ```c
 //shell
 int main(xxx)
 {
-char cmd[20];
-while(1)
-{
-    scanf("%s",cmd);
-    if(!fork())
+    char cmd[20];
+    while(1)
     {
-        exec(cmd);
+        scanf("%s",cmd);
+        if(!fork())
+        {
+            exec(cmd);
+        }
+        else
+            wait();
     }
-    else
-        wait();
 }
-
-}
-
 ```
 #### 系统调用实现
-要使用特殊中断指令int 0x80，故需要使用宏展开成一段汇编代码
-利用c语言利用#define 内嵌汇编
-fork()→展开成汇编int 0x80 +调用号，
-硬件通过中断机构，调用中断处理程序，系统中断处理程序进入内核进行处理
+要使用系统调用中断指令int 0x80，故需要使用宏展开成一段汇编代码  
+若用c语言实现，利用#define进行内嵌汇编,传递调用号和内核态函数所需参数
+
+e.g.fork()→展开成汇编int 0x80 +调用号
+
+硬件通过中断机构→得知中断类型为系统调用→调用系统调用中断处理程序→执行相应系统程序
 #### 类型
 进程控制fork exec exit  
-文件管理read write open close？
+文件管理read write open
 设备管理
 信息维护
 通信
@@ -89,7 +84,7 @@ fork()→展开成汇编int 0x80 +调用号，
 给用户进程分配未经抽象的资源
 降低系统一致性
 ## 操作系统的启动
-硬件提供了bios和指令集
+硬件提供了bios和指令集  
 bios→bootset`1个扇区`→setup`4个扇区` |实模式汇编→system{head.h-设置gdt。idt(中断向量表)|保护模式汇编，main.c[mem_init();...各种初始化]} 
 ```c
 void mem_init(long start_mem,long end_mem)
@@ -105,4 +100,3 @@ void mem_init(long start_mem,long end_mem)
 }
 
 ```
-## `虚拟机`
