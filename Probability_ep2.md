@@ -235,7 +235,12 @@ f(x)=\frac{1}{\sqrt{2\pi}\sigma}{\rm e}^{\frac{-(x-\mu)^{2}}{2\sigma^{2}}}
 $$
 #### 标准化和标准正态分布N(0,1)
 $$
-F(x)=P\{X\leq x\}=\Phi(\frac{x-\mu}{\sigma})
+F(x)=P\{X\leq x\}=\Phi(\frac{x-\mu}{\sigma})=\Phi(\frac{x-\mu}{\sqrt{\sigma^{2}}})
+$$
+#### 性质
+$$
+X\sim N(\mu_1,\sigma_1^{2}),Y\sim N(\mu_2,\sigma_2^{2})\\
+X+Y\sim N(\mu_1+\mu_2,\sigma_1^{2}+\sigma_2^{2})
 $$
 ## 一位`随机变量函数`分布
 ### 离散到离散√

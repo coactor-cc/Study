@@ -5,33 +5,37 @@
 ### 常函数
 定义域上为**偶函数** ->定积分的时候复合？
 ### 幂函数
+$y=x^a$
+
+a<0,
 $$
-y=x^a \\
-a<0,y=\frac{1}{x^{-a}},e.g. y=\frac{1}{x}\\
-1>a>0,习惯写为y=\sqrt{x}，可能没有负数部分 与y=x^{\frac{1}{a}}为逆映射，关于y=x对称
-\\
+y=\frac{1}{x^{-a}}
+$$
+![  ](images/AM_ep1_image-6.png)
+1>a>0,
+$$
+y=\sqrt{x}
+$$
 a>1,整数次奇偶性不同
 $$
 
+$$
+![Alt text](images/AM_ep1_image-5.png)
 ### 指数函数
 a>1
 1>a>0
 $$
-a^x\\
-e^x\\
-\lim_{x\rightarrow\infty}e^x=不\exist\\
+a^x,e^x\\
+\lim_{x\rightarrow\infty}e^x=not\exist\\
 \int_{-\infty}^0e^x=1
 $$
-![Alt text](images/AM_ep1_image-2.png)
-
-
+![Alt text](images/AM_ep1_image-2.png)  
 ![Alt text](images/AM_ep1_image-1.png)
 ### 对数函数
 $$
 \lim_{x\rightarrow{0}^+} x^\alpha\ln^\beta x=0,\alpha,\beta >0\\
 \lim_{x\rightarrow+\infty} \frac{\ln^\beta x}{x^\alpha}=0,\alpha,\beta >0\\
 $$
-
 ### 三角函数 
 周期性 
 $$
@@ -41,24 +45,28 @@ $$
 ### 反三角函数
 $$
 \arcsin x+\arccos x=\frac{\pi}{2}\\
-证明：1.求导0\\
-2.回代
 $$
+证明：1.求导 2.回代  
+![Alt text](images/AM_ep1_image-3.png)
 ## 初等函数
 ## 对勾函数
 $$
 y=x+\frac{k}{x},k>0
 $$
 ## 幂指函数为例
+$y=x^x$图像  
+1.端点求极限、代值
 $$
-x^x图像\\
-1.端点求极限、代值\\
-\lim_{x\rightarrow0^+}x^x=\lim_{x\rightarrow0^+}e^{x\ln x}=1\\
-2.求导求极值渐进性\\
-(x^x)'=(e^{x\ln x})'=x^x\cdot(x\ln x)'=x^x\cdot(\ln x+1)\\
-导数=0,x=\frac{1}{e}
+\lim_{x\rightarrow0^+}x^x=\lim{x\rightarrow0^+}e^{x\ln x}=1
 $$
-![Alt text](%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/images/image-4.png)
+2.求导求极值渐进性
+$$
+(x^x)'=(e^{x\ln x})'=x^x\cdot(x\ln x)'=x^x\cdot(\ln x+1)
+$$
+令$(x^x)'=0$得$x=\frac{1}{e}$
+![Alt text](images/AM_ep1_image-4.png)
+## 复合函数
+TODO ？？？？  
 ## 函数图像变换
 #### 平移
 ##### 左右
@@ -72,55 +80,12 @@ $$
 #### 伸缩
 ##### 横向
 ##### 纵向
-## 基本性质(高中的)
-### 单调性
-### 周期性
-### 函数奇偶性
-#### def
-迪利克雷函数，偶函数
-#### 判别法
-
-#### 复合函数奇偶性
-**`内偶则偶，内奇同外`**  
-最内层函数是偶函数，直接判定复合函数为偶函数;内层函数是奇函数，看外层，内非直接走定义，`注意定义域的对称性`
-
-    偶函数会在值域区间运转两遍，相当于对外层函数同一区间来回扫描了两次  
-    奇函数值域对称性，相当于把外层函数图像以不均匀的比例$k\cdot\Delta x$进行了放缩  
-
-**证** 二层复合，在对称区间$I$上有  
-
-$$
-h(x)=f(g(x))
-$$
-若g(x)为偶函数，有  
-$$
-g(-x)=g(x)
-$$
-则
-$$
-h(-x)=f(g(-x))=f(g(x))=h(t)
-$$
-若g(x)为奇函数，有  
-$$
-g(-x)=-g(x)
-$$
-则  
-$$
-h(-x)=f(g(-x))=f(-g(x))
-$$
-当f(x)为奇函数  
-$$
-f(-g(x))=-f(g(x))=-h(x)
-$$
-当f(x)为偶函数  
-$$
-f(-g(x))=f(g(x))=h(x)
-$$
-
-
+## 基本性质
+见ep0
 ## 极限
 ### 定义
-
+#### 数列极限
+#### 函数极限
 TODO  补充  
 ### 性质
 第一条是与极限值有关，二三预则在说极限存在下函数本身的特性，或者函数值与极限值的关系
@@ -154,16 +119,22 @@ $$
 
 指**函数极限**存在，且函数值f(x)在x轴的一侧，极限值不可能跑到另一侧
 
-**证** 采用反证法
+**证** 采用反证法  
+若不然，则
 $$
-若不然，则\lim f(x)<0\\
-根据局部保号性，有\\
-\exist\delta_1>0,使得0<|x-x_0|<\delta_1 时，f(x)<0\\
-若x_0的去心领域为0<|x-x_0|<\delta_2，\delta_2>0\\
-取\delta=min\{\delta_1,\delta_2\}\\
-在0<|x-x_0|<\delta内\\
-f(x)\geq 0,且f(x)<0,矛盾
+\lim f(x)<0
 $$
+根据局部保号性，有$\exist\delta_1>0$,当$0<|x-x_0|<\delta_1$时
+$$
+f(x)<0
+$$
+若$x_0$的去心领域为$0<|x-x_0|<\delta_2，\delta_2>0$   
+不妨取$\delta=min\{\delta_1,\delta_2\}$,当$0<|x-x_0|<\delta$时，有
+$$
+f(x)\geq 0
+$$
+与$f(x)<0$矛盾，**证**毕  
+
 为什么**极限值不能去**等号？$f(x)=x^2$  
 那么这样也是没有问题的  
 如果$x_0$的**去心邻域**内f(x)> 0且$\lim f(x)\exist$,那么$\lim f(x)\geq 0$  

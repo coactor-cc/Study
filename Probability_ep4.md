@@ -68,7 +68,22 @@ E\{[X-E(X)]^{2}\}=E\{ X^2-2XE(X)+[E(X)]^{2} \}\\
 $$  
 ![Alt text](images/Probability_ep4_image-1.png)
 ## 切比雪夫不等式
+**定理** 设随机变量X有期望$E(X)=\mu$,方差$D(x)=\sigma^{2}$,则对于$\forall \varepsilon$,不等式
+$$
+P\{ \left\vert X-\mu \right\vert \geq \varepsilon  \}\leq \frac{\sigma^{2}}{\varepsilon ^{2}} 
+$$
+成立，这一**不等式**为切比雪夫不等式 
 
+**证** 
+TODO 重要  
+
+解释：X到自己的均值应该相去不远，偏离均值很大的概率应该是很小的`由于可以任取故epsilon在应用中会替换为实际的数`
+
+应用场景：在不知道随机变量X的具体分布【分布函数、分布律|概率密度】的时候，只知道特征值E(X),D(X)，来估计事件发生的概率`这不是经典的统计，绕过了建立概率模型的过程`
+
+2.用于对随机变量序列依概率收敛的证明，都有epsilon
+
+步骤：P{A}=P{X≤a}→P{X-E(X)≤a-E(X)}→≤$\frac{D(X)}{(a-E(X))^{2}}$`错了没考虑绝对值`
 ## 协方差
 $$
 Cov(X,Y)=E\{(X-E(X))(Y-E(Y))\}
