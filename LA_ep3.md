@@ -102,3 +102,32 @@ P(A,B)=(F,PB)
 X=PB
 $$
 
+## 矩阵的秩
+### k阶子式
+矩阵内k条横线+k条数线交点元素组成的行列式
+### 定义
+**定义** 矩阵最高阶非0子式的阶数，记作$R(A)$
+
+数值等于向量组的秩：线性无关向量的个数  
+### 性质
+1
+2
+3
+4  
+5 $\max\{R(A),R(B)\}\leq R(A,B)\leq R(A)+R(B)$  
+6$R(A+B)\leq R(A)+R(B)$  
+7$R(AB)\leq min\{ R(A),R(B) \}$  
+8$A_{m\times n }B_{n\times l}=0$，则$R(A)+R(B)\leq n$
+## 线性方程组的解
+**定理3** n元线性方程组$Ax=b$  
+(i)无解$\Leftrightarrow R(A)<R(A,b)$  
+(ii)有唯一解$\Leftrightarrow R(A)=R(A,b)=n$  
+(iii)有无限多解$\Leftrightarrow R(A)=R(A,b)<n$
+
+直观解方程，不证
+
+**定理4** n元齐次线性方程$Ax=0$有非0解$\Leftrightarrow R(A)<n$  
+
+分析：在$R(A)=n$时唯一解为0向量，而在$R(A)<n$时之间有无穷多个解了，`且有n-r个线性无关解`n-R(A)为自由变量个数，这两个自由变量张成了二维平面
+
+。。。

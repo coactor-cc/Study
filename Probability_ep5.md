@@ -60,7 +60,7 @@ E(F)=\mu;D(F)=\sigma^{2}\\
 
 \overline{X}\sim N(\mu,\sigma^{2}/n)
 $$
-### 李雅普诺夫·拉普拉斯
+### 拉普拉斯
 若
 $$
 X_i\overset{iid}{\sim}B(1,p)

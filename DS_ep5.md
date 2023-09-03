@@ -41,7 +41,7 @@ int Search_Seq(SStable ST,KeyType key)
 设$P_i$相等  
 查找成功
 $$
-ASL=\sum_{i=1}^{n}P_iC_i=\frac{1}{n}\sum_{i=1}^{n}(n-i+1)=\frac{n+1}{2}
+ASL=\sum_{i=1}^{n}P_iC_i=\frac{1}{n}\sum_{i=1}^{n}(n-i+1)=\frac{n+1}{2} 
 $$
 查找失败
 $$

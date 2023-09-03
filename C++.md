@@ -187,7 +187,7 @@ void* p=0;
 我们已经给指针存了一个地址，怎么访问这个地址的数据呢，用*运算符
 *+指针变量名
 指针的*运算符叫做dereference运算符
-### &references 其实本质合指针一样
+### &references 其实本质和指针一样
 不占内存空间  
 建立了一个a的引用，给a造了一个别名  
 ```
@@ -228,29 +228,30 @@ void Increment(int& value)
 	Increment(a);
 ```
 ## 类和面向对象编程class|struct
-只是一种编程方式，但是java、C#只能进行面向对象编程，C又没有入口
-class 类类型的变量名
-由类类型构成的变量称为对象，对象变量称为实例
-类中内容的可见性default-privatr public
-方法=在类中的函数
-只是语法糖，让代码更好管理
+只是一种编程方式，但是java、C#只能进行面向对象编程，C又没有入口  
+class 类类型的变量名  
+由类类型构成的变量称为对象，对象变量称为实例  
+类中内容的可见性default-private-public  
+方法=在类中的函数-只是语法糖，让代码更好管理
 ### 与C的对比
-//C++中可以直接在结构体里定义初值
-//C++定义对象A前面不用加struct
-//此时只有别名不能定义构造函数
-### 区别：可见性visibility
-面向对象的概念，对程序性能没有影响 
-类默认private，struct默认public 
-private：只有在类的作用域内可以访问，或者friend  
-**私有成员m_前缀表示其为私有成员**
-protect：类+子类可以访问
-public：全局访问
-#### 技术实现角度   
-只有可见度的区别 default class默认private
-structure 默认public
+//C++中可以直接在结构体里定义初值  
+//C++定义对象A前面不用加struct  
+//此时只有别名不能定义构造函数  
+### 可见性visibility  
+private：只有在类|friend类作用域内可以访问  
+
+**hint：私有成员m_前缀表示其为私有成员**  
+
+protect：类+子类可以访问  
+public：全局访问  
+#### struct&class区别：
+##### 技术实现 
+只有可见度的区别   
+class默认private  
+structure 默认public  
 使用情况不同只是为了保存向后兼容  
-#### 编程风格（编程逻辑角度）
-当表示Plain old data POD 喜欢用struct
+##### 编程风格（编程逻辑角度）
+当表示Plain old data POD 喜欢用struct  
 eg 数学向量类
 ```c++
 struct vect2{
@@ -263,7 +264,9 @@ struct vect2{
 };
 ```
 ### 实例化一个类
-将实例放在stack|heap  
+我们可以选择将实例放在stack||heap  
+在C++中我们可以将变量分配到stack上，但是在JAVA中，所有变量都被分配在heap中   
+#### stack实例化
 stack frame
 stack和他的作用域和调用相关  
 ```C++
@@ -271,24 +274,23 @@ Entity s(parameter);
 Entity u=Entity(parameter);
 ```
 如果能放在stack就放在stack里
+#### heap实例化
+一旦你new了，you are actually responsible to free that memory,它不像java会自动处理这些事情  
 ```C++
 Entity* entity=new Entity(parameter);
 (*entity).Getname();
-entity->Getname();
+entity->Getname();\\ 与上一语句相同
 delete entity;
 ```
-在C++中我们可以将变量分配到stack上，但是在JAVA中，所有变量都被分配在heap中  
-但是一旦你new了，you are actually responsible to free that memory  ,它不像java会自动处理这些事情  
 由于entity是一个指针，所以先需要dereference 然后再调用内容  
 或者我们使用箭头运算符
 TODO 未来介绍箭头运算符  
-TODO  newclass  
 ### 构造函数
-没有返回值，与类名一致；
+没有返回值，与类名一致；  
 default construct  do noting
-在c++中 类成员从不会被初始化；可以重载
-隐藏构造函数private
-当你用new创建heap的时候也会调用construct
+在c++中 类成员从不会被初始化；可以重载  
+隐藏构造函数private  
+当你用new创建heap的时候也会调用construct  
 ```c++
 private Log()
 {
@@ -320,7 +322,7 @@ struct Entity
 	}
 	Entity():x(1),y(2),e(example(8))|e(8)
 	{
-	//这里example创建了两次
+	//这里example创建了1次
 	}
 	static void Print()
 	{
@@ -421,10 +423,10 @@ int main()
 ## Enum
 枚举类型，背后对应的整数数据类型你可以自己定义，在这里只需要使用符号替代整数使用，这有利于我们限制输入范围
 ## array
-a collections of varibles the same type
-访问错误的下标在DEbug会发生访问冲突
-在stack中建立数组
-在活动记录中建立
+a collections of varibles the same type  
+访问错误的下标在Debug会发生访问冲突-缺少边界检测
+### 在stack中建立
+
 ```C++
 int main()
 {
@@ -443,7 +445,7 @@ int main()
 	std::cin.get();
 }
 ```
-在heap中创建数组
+### 在heap中建立数组
 ```c++
 int* array=new int[5];
 delete[] array;
@@ -452,15 +454,18 @@ int count=sizeof(array)/sizeof(int);
 //解决方案
 static const int size=5;
 int  array[size];
-
 ```
-最大的不同是生命周期  
-第二个，内存间接，会导致内存碎片cache缺失  
+### 两种建立数组方式的区别
+最大的不同是`生命周期`：动态开辟的数组不会随着函数调用结束而被释放  
+第二个，动态开辟数组为内存间接访问，不合理分配会导致内存碎片&cache缺失`heap区的数据块可能不在cache中`   
+
 如果可能的话还是不要new了，指针间接访存有性能损失啊  
 
-原始数组，边界检测，没法算出开辟的数组大小通过new  
+### 原始数组与数组标准库
+C++原始数组，没有边界检测，通过new没法算出开辟的数组大小  
+
 当你在栈上分配数组的时候，编译器必须知道数组的大小  
-C++标准数组，安全但是开销大了点
+C++标准库数组，安全但是开销大了点
 ```c++
 #include<array>
 std::array<int,5>another;
@@ -631,3 +636,19 @@ void Print(const Entity &e)
 }
 //如果你把const去掉，你将不能在这个函数内调用该方法，因为这个函数的参数是一个没有修改权限的const 类实例的引用
 ```
+### new OP
+找空闲分区表 连续分配并调用构造函数
+你可以overwrote it
+```c++
+Entity e=new Entity();
+Entity e=(*Entity)malloc(sizeof(Entity))
+//这两者只有是否调用构造函数的区别
+
+delete e;
+// 如果分配的是数组的话
+int* b=new int[50];
+
+delete []b;
+// new 可以显式带参数指明分配的地址空间
+```
+

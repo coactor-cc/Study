@@ -68,3 +68,42 @@ so easy
 ## 基数排序
 利用key=int 进行位数排序
 需要一个数组列表
+
+之所以能实现，是因为？？ 关键字可拆？？
+
+分配和收集思想
+
+手动|几乎不考代码
+```c++
+struct node{
+    int key;
+    node* next;
+}
+
+class list{
+    node* head=null;
+    length=0;
+    public:
+    void head_insert(int key){
+        node new=(key,head->next)
+        head.next=&new;
+    }
+    void init(int[]x){
+        for(int i=0;i<int_num;i++)
+        {
+            int m={1,2,3,3,4}
+            head.init(m[i])
+        }
+    }
+    void RadixSort()
+    {
+        
+    }
+}
+
+    
+
+
+```
+
+## 外部排序
