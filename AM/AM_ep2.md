@@ -9,4 +9,4 @@ f'(x_0)=\lim_{x\rightarrow x_0}\frac{\Delta y}{\Delta x}=\lim_{\Delta x\rightarr
 $$
 点导数又叫`导数值`|函数在xx点的导数
 ### 导函数
-函数$y=f(x)$在开区间$I$上处处可导，记为$y'orf'(x)$,简称`导数`
+函数$y=f(x)$在开区间$I$上处处可导，记为$y'|f'(x)$,简称`导数`

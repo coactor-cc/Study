@@ -651,4 +651,8 @@ int* b=new int[50];
 delete []b;
 // new 可以显式带参数指明分配的地址空间
 ```
+### 隐式和显式类型转换
+explicit 禁止了隐式类型转换
+### operate and overwrote
+java 和c#只支持部分op的重载，而c++支持对op的完全控制
 

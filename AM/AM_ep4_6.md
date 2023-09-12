@@ -27,13 +27,13 @@ f(x)是以T为周期的连续函数,
 **结论掌握,待补充**
 ### 周期性分析：
 #### 预备定理
+如果f(x)是以T为周期的连续函数,它在一个/n个周期上的积分值与起点无关
 $$
-如果f(x)是以T为周期的连续函数,它在一个/n个周期上的积分值与起点无关\\
 \int_a^{a+T}f(x){\rm d}x=\int_0^{T}f(x){\rm d}x
 $$
 #### 原函数周期T的充要条件
+若f(x)是以T为周期的连续函数,则
 $$
-f(x)是以T为周期的连续函数,\\
 \int_a^xf(t){\rm d}t 以T为周期\Leftrightarrow \int_0^{T}f(t){\rm d}t=0
 $$
 ## 定积分(黎曼积分)
@@ -41,7 +41,10 @@ $$
 被积函数，积分变量，积分上下限等概念需要加强
 $$
 \int_a^bf(x){\rm d}x=\lim_{n\rightarrow\infty}\sum_{i=1}^nf(a+\frac{b-a}{n}i)\frac{b-a}{n}\\
+
+$$
 特殊的:
+$$
 \int_0^1f(x){\rm d}x=\lim_{n\rightarrow\infty}\sum_{i=1}^nf(\frac{i}{n})\frac{1}{n}
 $$
 ### 定积分存在定理_记结论
@@ -58,15 +61,24 @@ $\int_a^b[k_1f(x)+k_2g(x)]{\rm d}x=k_1\int_a^bf(x){\rm d}x+k_2\int_a^bg(x){\rm d
 #### 可拆性√
 $\int_a^bf(x){\rm d}x=\int_a^cf(x){\rm d}x+\int_c^bf(x){\rm d}x$
 #### **保号性**※
-$在区间[a,b]上,若f(x)\leq g(x),则\int_a^bf(x){\rm d}x\leq \int_a^bg(x){\rm d}x$   
-特殊的，积分不等式$|\int_a^bf(x){\rm d}x|\leq \int_a^b|f(x)|{\rm d}x$  
-**若f（x）不恒等于0，则严格大于**
+在区间[a,b]上,若f(x)≤g(x),则
 $$
-证明：\\ 做差法
+\int_a^bf(x){\rm d}x\leq \int_a^bg(x){\rm d}x
+$$   
+特殊的，积分不等式
+$$
+|\int_a^bf(x){\rm d}x|\leq \int_a^b|f(x)|{\rm d}x
+$$  
+`若f（x）不恒等于0，则严格大于`
+**证** 
+TODO 作差法  
 
-$$
 #### 估值定理※
-$M，m分别为f(x)在区间[a,b]上的最大、最小值，有ml\leq \int_a^bf(x){\rm d}x\leq ML$
+M，m分别为f(x)在区间[a,b]上的最大、最小值，则
+$$
+ml\leq \int_a^bf(x){\rm d}x\leq ML
+$$
+
 #### 中值定理※
 设f(x)在区间[a,b]上连续，则至少存在一点$\xi$,使得
 $$
@@ -87,7 +99,8 @@ TODO  对称性与区间再现
 ##### 定义（积分上限函数）
 
 ##### 性质
-**定理1**  $f(x)在[a,b]可积，则函数F(x)=\int_a^bf(x){\rm d}x在[a,b]上连续$
+**定理1**  
+f(x)在[a,b]可积，则函数$F(x)=\int_a^bf(x){\rm d}x$在[a,b]上连续
 
 证明：利用可积的必要条件  
 TODO **证** 它  
@@ -163,8 +176,8 @@ $$
 ### 反常积分的敛散性判别（快速做题，利用结论比阶）
 1. $\int_1^{+\infty}\frac{1}{x^p}{\rm d}x p>1,收敛；p<1,发散$
 2. $\int_0^1\frac{1}{x^p}{\rm d}x p>1,发散；0<p<1,收敛$
-![Alt text](image-18.png)  
-e.g.2  **重新看**
+e.g.2  
+TODO **重新看**  
 $$
 \int_0^1\frac{\ln x}{x^\alpha}{\rm d}x\\
 e.g.3\\
@@ -174,7 +187,12 @@ $$
 ## 计算
 ### 基本积分表
 ### 凑微分法
-### 换元积分
+### 换元积分(第二类换元)
+
+TODO 不熟练多练习  
+1根号换元
+2倒代换
+3三角代换|双曲函数代换
 ### 分部积分
 用于形如
 1. 幂·（三角、指数）

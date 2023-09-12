@@ -1,4 +1,5 @@
 # (数的)不等式  
+![Alt text](images/AM_ep0_image-3.png)
 ## 作差法
 1.若|f(x)|，|g(x)| 平方作差  
 2.作商

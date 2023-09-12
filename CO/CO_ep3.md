@@ -16,8 +16,6 @@
 #### 操作类型
 - 只读 ROM(非易失)
 - 读写 RWM（易失）
-  
-![Alt text](CO_ep3/images/image-1.png)
 #### 应用功能  
 - 高速缓冲存储器SRAM
 - 主存储器DRAM
