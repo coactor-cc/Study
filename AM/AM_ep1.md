@@ -41,10 +41,20 @@ $$
 \lim_{x\rightarrow+\infty} \frac{\ln^\beta x}{x^\alpha}=0,\alpha,\beta >0\\
 $$
 ### 三角函数 
-周期性 
 $$
-\sec x、\csc x
+\sec x=\frac{1}{\cos x},\csc x=\frac{1}{\sin x}
 $$
+#### `周期性`
+$$
+\sin nx,T=\frac{2\pi}{n}\\
+\sin^{n} x ,T=
+\begin{cases}
+\pi ,n=2k\\
+2\pi ,n=2k+1
+\end{cases}
+$$
+cos x 同理
+
 
 ### 反三角函数
 $$
@@ -77,7 +87,11 @@ x^{x}=e^{xlnx}
 $$
 ### 双曲函数
 
-TODO 添加一些内容  
+TODO 添加一些内容 
+
+### 特殊函数
+![Alt text](images/AM_ep1_image-7.png)  
+
 ###  函数的复合  
 ## 函数图像变换
 #### 平移

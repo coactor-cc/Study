@@ -651,8 +651,30 @@ int* b=new int[50];
 delete []b;
 // new 可以显式带参数指明分配的地址空间
 ```
-### 隐式和显式类型转换
+### 隐式和显式关键字inplicit&explicit
 explicit 禁止了隐式类型转换
 ### operate and overwrote
 java 和c#只支持部分op的重载，而c++支持对op的完全控制
+### this point
+指向类实例的一个指针
+### heap和stack的object scope
+```c++
+//错误代码 ，无效的创建数组函数，因为该数组在函数内部就g了
+int * createarray(){
+	int array[50];
+	return array;
+
+// 返回的是一个内存stack 的 指针 ，可惜这片空间已经被释放了
+}
+
+```
+
+可以创建一个作用域指针类 smart point unic point
+mutex locking
+
+### smart point
+
+#### unic point 
+在heap上实现的栈作用域指针
+#### share point
 
