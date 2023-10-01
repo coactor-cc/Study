@@ -84,8 +84,8 @@ $$
 $$
 y''=\frac{{\rm d}p}{{\rm d}y}\frac{{\rm d}y}{{\rm d}x}=\frac{{\rm d}p}{{\rm d}y}\cdot p
 $$
-### 高阶线性`常`微分方程
-
+### 高阶线性`常系数`微分方程
+#### 解的结构
 $$
 y''+P(x)y'+Q(x)y=0
 $$
@@ -100,7 +100,7 @@ $$
 y=C_1y_1(x)+C_2y_2(x)
 $$
 是方程的通解  
-#### 二阶常系数齐次线性方程
+#### 二阶常系数齐次线性方程通解
 $$
 y''+py'+qy=0
 $$
@@ -121,33 +121,44 @@ r_{1,2}=\frac{-p\pm \sqrt{p^{2}-4q}}{2}\\
 \Delta<0,y={\rm e}^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)\\
 \end{cases}
 $$
-> 为了找特解简单，利用${\rm e}^{rx}$的优秀求导性质，来求解，也就是寻找一些形如${\rm e}^{rx}$的解，只是这些解的${r}$不同，故叫${r}$为特征
-#### n阶常系数齐次线性方程
 
-TODO n阶  
-#### 二阶常系数非齐次线性方程
+TODO   为了找特解简单，利用${\rm e}^{rx}$的优秀求导性质，来求解，也就是寻找一些形如${\rm e}^{rx}$的解，只是这些解的${r}$不同，故叫${r}$为特征
+#### n阶常系数齐次线性方程通解
+1.写特征方程
+2.求解`因式分解|观察`根据特征根，写出通解结构
+#### 二阶常系数非齐次线性方程特解
 $$
 y''+py'+qy=f(x)
 $$
-**定理3** 
-TODO 定理3  
-##### 1
-$$
-f(x)={\rm e}^{\lambda x}P_m(x)
-$$
+
+##### $f(x)={\rm e}^{\lambda x}P_m(x)$
+
 **解** 特解$y^{*}$设为
 $$
 {\rm e}^{\lambda x}Q(x)x^{k}
 $$
 Q(x)为P(x)的通式，k为$\lambda=r$的数量
-##### 2
-$$
-f(x)={\rm e}^{\alpha x}[P_l(x)\cos \beta x+Q_n(x)\sin \beta x]
-$$
+##### $f(x)={\rm e}^{\alpha x}[P_l(x)\cos \beta x+Q_n(x)\sin \beta x]$
 **解** 特解$y^{*}$设为
 $$
 y^{*}={\rm e}^{\alpha x}[F_1(x)\cos \beta x+F_2(x)\sin \beta x]x^k
 $$
-F(x)为通式，k为$\alpha\pm \beta{\rm i}=r$的数量
-##### 题型
-一般逆向考察，不会叫你解Q(x)，而会要你根据Q(x)
+F(x)为P、Q最高次的通式，k为$\alpha\pm \beta{\rm i}=r$的数量[0,1]
+#### 微分算子法
+学习齐次方程写出算子多项式
+$$
+F(D)=D^{2}+pD+q
+$$
+设非齐次的f(x)
+##### $f(x)={\rm e}^{\lambda x}$
+$$
+y^{*}=
+\begin{cases}
+\frac{1}{F(\lambda)}{\rm e}^{\lambda x}\\
+\frac{1}{F'(\lambda)}x{\rm e}^{\lambda x}\\
+\frac{1}{F''(\lambda)}x^{2}{\rm e}^{\lambda x}
+\end{cases}
+$$
+##### $f(x)={\rm e}^{\alpha x}[P_l(x)\cos \beta x+Q_n(x)\sin \beta x]$
+
+

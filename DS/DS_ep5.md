@@ -48,6 +48,8 @@ $$
 ASL=\sum_{i=1}^{n}P_iC_i=\frac{1}{n}\sum_{i=1}^{n}(n+1)=n+1
 $$
 ## 折半查找
+
+![Alt text](images/DS_ep5_image-1.png)
 元素有序
 ```C++
 //迭代
