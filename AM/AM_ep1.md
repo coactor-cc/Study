@@ -87,10 +87,11 @@ x^{x}=e^{xlnx}
 $$
 ### 双曲函数
 
-TODO 添加一些内容 
 
-### 特殊函数
-![Alt text](images/AM_ep1_image-7.png)  
+### 特殊函数和图像
+![Alt text](images/AM_ep1_image-7.png) 
+
+![Alt text](images/AM_ep1_image-8.png)
 
 ###  函数的复合  
 ## 函数图像变换

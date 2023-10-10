@@ -50,7 +50,6 @@ $$
 注意这依旧是一个`函数`的极限   
 在**有定义**的趋向方式下唯一 
 #### 计算
-TODO 复习极限运算  
 适用极限运算法则  
 1.连续函数代值  
 2.等价无穷小替换  
@@ -93,7 +92,7 @@ $$
 f_x(x,y)=\frac{\partial f}{\partial x}=\frac{\partial z}{\partial x}
 $$
 
->$f_x(x,y);f_y(x,y)$都是`关于x,y`的函数
+>$f_x(x,y);f_y(x,y)$都是`关于x,y`的`二元`函数
 #### 高阶偏导数
 当$f_x(x,y);f_y(x,y)$的偏导数也存在，那么称它们是$z=f(x,y)$的二阶偏导数，如下
 $$
@@ -149,15 +148,15 @@ $$
 $$
 运用拉格朗日中值定理，得
 $$
-f(x+\Delta x,y+\Delta y)-f(x,y+\Delta y)=f_x(x+\theta_1\Delta ,y=\Delta y)\Delta x(1<\theta_1<1)
+f(x+\Delta x,y+\Delta y)-f(x,y+\Delta y)=f_x(x+\theta_1\Delta x,y+\Delta y)\Delta x(1<\theta_1<1)
 $$
-又因为连续，则
+又因为`偏导数连续`，则
 $$
-f_x(x+\theta_1\Delta ,y=\Delta y)\Delta x(1<\theta_1<1)=[f_x(x,y)+\omicron(\Delta x,\Delta y)]\Delta x
+f_x(x+\theta_1\Delta x,y+\Delta y)\Delta x(1<\theta_1<1)=[f_x(x,y)+\omicron(\Delta x,\Delta y)]\Delta x
 $$
 同理，剩余略，故
 $$
-\displaystyle\lim_{\Delta x\rightarrow 0 \atop \Delta y\rightarrow 0}\Delta x-{\rm d}x=0
+\displaystyle\lim_{\Delta x\rightarrow 0 \atop \Delta y\rightarrow 0}\Delta z-{\rm d}z=0
 $$
 #### 题型
 判别`某点`是否可微：  
@@ -241,5 +240,3 @@ TODO 多元泰勒公式证
 >为什么一定是二元函数：二元的情况下加一个附加条件就可以实现到一元函数的转换→用费马引理
 #### 拉格朗日乘数法
 本质，将多元函数代入条件变成一元函数，求一元函数驻点待值，只能处理函数连续的问题
-##### 拉格朗日函数
-TODO 练习  

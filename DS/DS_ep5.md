@@ -47,10 +47,9 @@ $$
 $$
 ASL=\sum_{i=1}^{n}P_iC_i=\frac{1}{n}\sum_{i=1}^{n}(n+1)=n+1
 $$
-## 折半查找
-
+## `折半查找`
+`元素有序且为顺序表`
 ![Alt text](images/DS_ep5_image-1.png)
-元素有序
 ```C++
 //迭代
 int Search_Bin(SSTable ST，KeyType key)
@@ -80,10 +79,14 @@ int Search_Bin(SSTable ST，KeyType key)
 空链域=失败结点个数=n+1
 ### ASL
 TODO  折半查找平均查找长度细节  
-$$
-ASL\leq\lceil log_2 (n+1)\rceil
-$$
+#### 查找成功
+$\sum level\cdot node_{num}$
+#### 查找失败
+总共查找失败的情况区间为n+1种，设概率均等
+失败区间×上级节点
 ## 分块查找
+`对应的数据结构不再是顺序表而是索引顺序表`
+
 块内无序，块间有序
 ```c++
 index_list{
@@ -94,6 +97,20 @@ index_list{
 确定分块:顺序或者折半
 分块内顺序查找
 比较完分块，在**low块**中找元素
+
+### ASL
+设索引表有b个节点`分b块`；
+指向的顺序表有s个节点`每块s个data`；
+
+查找成功_双顺序型  
+`索引表中仅保存key值不能把顺序表中的全部顺序返回，故即使相等也需要到顺序表中再次查找`
+$$
+ASL=\frac{b+1}{2}+\frac{s+1}{2}
+$$
+当b=s=$\sqrt{n}$时，平均查找长度为
+$$
+ASL=\sqrt{n}+1
+$$
 ## ~~跳跃链表~~
 ```C++
 \\跳跃链表的学习

@@ -112,18 +112,18 @@ $$
 模2乘 手工+模2加
 模2除 上商时用余数的首位作为商
 ##### 工作原理 
+除数G(x)——生成多项式 校验位R(x)数据多项式M(x)  
+由于CRC通过校验码是否能够整除来检验出错，故$[M(x)x^k+R(x)]/G(x)$的余数为0
 $$
-除数G(x)——生成多项式 校验位R(x)数据多项式M(x)\\
-由于CRC通过校验码是否能够整除来检验出错，故\\
-[M(x)x^k+R(x)]/G(x)的余数为0\\
 \begin{aligned}
-设M(x)x^k/G(x)&=Q(x)……R\prime(x)\\
-故[M(x)x^k+R(x)]/G(x)&={[M(x)x^k+R\prime(x)]+R(x)}/G(x)\\
+suppose M(x)x^k/G(x)&=Q(x)……R\prime(x)\\
+\therefore[M(x)x^k+R(x)]/G(x)&={[M(x)x^k+R\prime(x)]+R(x)}/G(x)\\
 &={M(x)x^k+[R\prime(x)+R(x)]}/G(x)\\
 &=Q(x)……R\prime(x)+R(x)
 \end{aligned}\\
-有R\prime(x)=R(x)时余数为0，R\prime(x)是G(x)的余数，故G(x)为k+1位，R(x)为M(x)左移k位后除G(x)得到的余数
 $$
+有$R\prime(x)=R(x)$时余数为0，$R\prime(x)$是G(x)的余数，故G(x)为k+1位，R(x)为M(x)左移k位后除G(x)得到的余数
+
 ##### CRC的校验  
 余数补0除G(x)循环   
 G(x)举例：  

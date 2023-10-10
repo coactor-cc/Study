@@ -76,13 +76,6 @@ $$
 |P| $p_1$ | $p_2$ | $p_3$ | ... |
 
 #### 矩阵形式
-\begin{bmatrix}
-    $1 & $2 & $3 \\
-    $4 & $5 & $6 \\
-    $7 & $8 & $9 \\
-\end{bmatrix}
-
-TODO matix  
 ### 分布函数
 $$
 F(x)=P\{ X\leq x \}=\sum_{x_i\leq x}P\{X=x_i\}
