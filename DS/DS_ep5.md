@@ -111,36 +111,8 @@ $$
 $$
 ASL=\sqrt{n}+1
 $$
-## ~~跳跃链表~~
-```C++
-\\跳跃链表的学习
-struct node{
-    int elem；
-    node* next； 
-}；
-class Skip_List{
-    node* list；
-    int length；
-    public:
-    void init()
-    {
-        node sentinel=new node();
-        list=&sentinel;
-    }
-    void insert(int x)
-    {
-
-    }
-    int search(int key)
-    {
-        index=
-     return index;
-    }
-};
-```
-查找和插入都只需要$\Omicron(log n)$
 ## 二叉排序树
-是一个动态查找表
+是一个`动态查找表`
 ### 查找
 TODO 查找  
 ### 插入

@@ -86,7 +86,8 @@ IR←M[(PC)]；PC←(PC)+"1"
 操作  
 $$
 {\rm MAR\leftarrow(PC)}\\
-{\rm IR=M[(MAR)]}\\
+{\rm MDR=M[(MAR)]}\\
+{\rm IR=(MDR)}\\
 {\rm PC=(PC)+1}
 $$
 **(IR)=0010 0200 (PC)=11H**
@@ -119,17 +120,18 @@ $$
 执行:  
 MAR=(R0)//地址交给MAR    
 MDR=(R2)//数据交给MDR    
-M[MAR]=MDR//表示写操作    
+M[MAR]=(MDR)//表示写操作    
 结果  
 **M[20H]=30H**
 #### **减法SUB** 0110 0110
 取指过程：IR=M[(PC)]=0110 0110 PC=PC+1=13H  
 译码：0110→SUB：RD←(RD)-(RS);01:RD=R1,10:RS=R2  
 执行：  
-同时进行(ALU为组合逻辑电路)  
+`同时进行`(ALU为组合逻辑电路)  
 $$
 {\rm ALU_A}\leftarrow{\rm (R1)}\\
 {\rm ALU_B}\leftarrow{\rm (R2)}\\  
+{\rm ALU_A-ALU_B}\\
 {\rm R1}\leftarrow{\rm ALU_F}
 $$
 结果  
@@ -143,6 +145,7 @@ ExtU=符号拓展+disp=1111 1110=FEH
 $$
 {\rm ALU_A}\leftarrow{\rm (PC)}\\
 {\rm ALU_B}\leftarrow{\rm (ExtU)}\\  
+{\rm ALU_A-ALU_B}\\
 {\rm PC}\leftarrow{\rm ALU_F}
 $$
 结果  
@@ -257,14 +260,14 @@ $T_c=\max\{T_{\rm\mu OPi}\}$、CPI=n
 #### 功能
 指令控制、操作控制、时间控制、异常中断和处理  
 #### 基本组成
-指令部件(PC+IR)：控制指令顺序执行
-CU：实现操作控制和时间控制`有序的`产生${\rm\mu OP}$控制信号
-中断机构：异常及中断处理，检测响应异常中断请求`处理由软件完成——软硬交界`  
+指令部件(PC+IR)：控制指令顺序执行  
+CU：实现操作控制和时间控制`有序的`产生${\rm\mu OP}$控制信号  
+中断机构：异常及中断处理，检测响应异常中断请求`处理由软件完成——软硬交界`    
 #### 工作原理
-循环`有序地`产生${\rm\mu OP}$序列的${\rm\mu OP}$Cmd 
+循环`有序地`产生${\rm\mu OP}$序列的${\rm\mu OP}$Cmd   
 时序控制电路产生节拍信号，${\rm\mu OP}$信号形成电路根据${\rm\mu OP}$要求产生${\rm\mu OP}$Cmd，来控制数据通路实现指令执行
 #### 分类
-根据cu产生${\rm\mu OP}$Cmd的方式不同，  
+根据CU产生${\rm\mu OP}$Cmd的方式不同，  
 硬布线控制器：速度快、结构不规整-RISC  
 微程序控制器-CISC
 ### 时序系统组织

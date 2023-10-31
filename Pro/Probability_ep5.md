@@ -14,7 +14,15 @@ $$
 **例** 设随机变量$X$,期望$E(X)=\mu$,方差$D(x)=\sigma^{2}$,设随机变量序列$X_1,X_2,\cdots,X_n$与X独立同分布，  
 试证：$Y=\frac{2}{n(n+1)}\sum_{i=1}^{n}iX_i\overset{P}{\rightarrow}\mu$  
 **证** 
-TODO 证明回顾  
+
+$$
+\because E(Y)=\frac{2}{n(n+1)}\sum_{i=1}^{n}iE(X_i)=\mu\\
+D(Y)=\frac{2^{2}}{n^{2}(n+1)^{2}}\sum_{i=1}^{n}i^{2}D(X_i)=\cdots\\
+P\{ |Y-\mu|<\varepsilon \}\geq 1-\frac{{D(Y)}}{\varepsilon ^{2}}\\
+
+\lim_{n\rightarrow +\infty}1-\frac{{D(Y)}}{\varepsilon ^{2}}=1-\frac{1}{\varepsilon ^{2}}\lim_{n\rightarrow +\infty}\frac{n(2n-3)}{3(n+1)}
+$$
+ 
 ## 大数定律
 用于计算随机变量序列的算术平均序列$\overline{X}$的概率收敛值
 ### 切比雪夫大数定律
@@ -41,7 +49,7 @@ $$
 
 看似结论是切比雪夫大数定律的特例，但约束条件不同，这个约束条件更强
 ## 中心*centeral*极限定理
-中心只不过是个修饰词
+中心只不过是个修饰词  
 独立同分布independently identically distributed
 $\overset{iid}{\sim}$
 
