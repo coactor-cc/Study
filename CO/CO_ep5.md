@@ -327,7 +327,7 @@ $$
 ![Alt text](images/CO_ep5_image-10.png)
 #### ${\rm\mu OP}$Cmd形成电路设计
 ${\rm\mu OP}$Cmd使用时间表
-![Alt text](images/CO_ep5_image-9.png)
+![Alt text](images/CO_ep5_image-9.png)   
 ${\rm\mu OP}$Cmd逻辑表达式
 $$
 PCsrc[1]＝T_2\cdot j，PCsrc[0]＝T_0，PCWr＝T_0+T_2\cdot j，\\
@@ -335,8 +335,8 @@ PCsrc[1]＝T_2\cdot j，PCsrc[0]＝T_0，PCWr＝T_0+T_2\cdot j，\\
            End＝T_2\cdot (beq+j)+T_3\cdot sw+T_4\cdot (add+sub+ori+lw)
 
 $$
-用可编程逻辑阵列PLA实现
-![Alt text](images/CO_ep5_image-11.png)
+用可编程逻辑阵列PLA实现  
+![Alt text](images/CO_ep5_image-11.png)  
 每个状态焊死
 组合逻辑形成${\rm\mu OP}$Cmd
 ### 微程序控制器
@@ -348,7 +348,7 @@ $$
 #### CPU工作流程与微程序机构 CS
 #### ${\rm\mu OP}$Cmd形成机构`与硬布线的不同`
 微地址形成电路+μAR+μIR+CS`ROM`+指令译码器`MUX组成`
-![Alt text](images/CO_ep5_image-13.png)
+![Alt text](images/CO_ep5_image-13.png)  
 微指令周期：取微指令、执行微指令    (～1个节拍)
 μAR形成：加电时由硬件产生，还需产生PC(首条指令地址)
 #### 微程序控制器的工作原理
@@ -366,11 +366,15 @@ CPU内部执行指令引起的意外事件
 可能被修复的异常  
 发生时间：指令执行过程中  
 处理：检测到立即进行异常处理  
-处理结束：返回当前指令重新执行|返回下一条指令继续执行|终止进程
+处理结束：  
+成功：返回当前指令重新执行|返回下一条指令继续执行  
+失败：终止进程
 #### 陷阱Trap
 预先安排的异常
 1. 安排程序状态`PSW中的TF位，程序任意步TF=1，异常`
-2. 特殊指令INT 3`设置程序断点`；INTO `执行INTO时OF=1 OFcheck`；INTn`系统调用`
+2. 特殊指令INT 3`设置程序断点`；  
+   INTO `执行INTO时OF=1 OFcheck`；  
+   INTn`系统调用`
 
 发生时间：指令执行结束  
 处理：检测到立即进行异常处理  
@@ -500,7 +504,7 @@ $$
 动态分支预测需分支目标缓冲器(BTB)、预测逻辑等部件支持
 ### 指令流水并行技术
 #### ~~超级流水线~~
-加流水线级数的方法来缩短拍长，提高指令流出速度`但CPI=1`
+加流水线`级数`的方法来缩短拍长，提高指令流出速度`但CPI=1`
 #### 多发射流水线
 增加内部元件使得多条指令在流水线中同时执行，使得同时流出多条指令
 `CPI<1`
