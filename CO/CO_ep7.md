@@ -242,13 +242,15 @@ BYTE _outp(unsigned short usPort，BYTE btData);
 多用于字符设控制  
 思想：设备启动→循环查询设备工作状态→就绪→传送  
 特点：CPU在此期间不能做其他事情，外设CPU串行工作
-![Alt text](images/CO_ep7_image-3.png)
+
 #### 独占查询
 启动后立即开始查询
 #### 定时查询
-启动后间隔一段时间开始查询    
+启动后间隔一段时间开始查询  
+![Alt text](images/CO_ep7_image-3.png)  
 #### I/O接口组织
 数据线、控制线、应答线  
+![Alt text](images/CO_ep7_image-15.png)
 ![Alt text](images/CO_ep7_image-9.png)
 ### 程序**中断**I/O方式
 执行启动外设指令→外设就绪→I/O请求→中断响应→中断处理→中断返回  
@@ -282,24 +284,39 @@ TODO   8259A
 ### **DMA**控制方式
 磁盘需求；磁盘→DDR   
 利用DMA接口传输，相当于总线让DMA作为主设备，MEM作为从设备   
-direct memory access：由DMA接口来控外设-主存信息传输
+direct memory access：由DMA接口来控外设-主存信息传输  
+
+
 TODO 主存与外存的页面置换非常相关  
->DMA方式的存在的意义，将以CPU为中心变为以存储器为中心
+>DMA方式的存在的意义，将以CPU为中心变为以存储器为中心(完全正确)实现了数据`传送`和`加工`的并行
 
 需要CPU的支持  
-１传送准备和结束处理：设置传送字数、设置主存缓冲区、启动设备  
+１传送准备和结束处理：设置传送字数、设置主存缓冲区、启动设备、数据校验等  
 ２让出HOST总线控制权
 #### 传送方式
+| 方式 | 周期条件 | 特点 |
+|---|---|---|
+| CPU停止访问 | 外设≈主存 | 控制简单 |
+| 周期挪用 | 外设>>主存 | I/O优先 |
+| 分时交替 | CPU>主存 | 透明DMA |
+
 ##### 停止CPU访问主存
-在DMA接口访存时放弃访存
+在DMA接口访存时放弃访存 外设读写周期与主存周期相近  
+
+![Alt text](images/CO_ep7_image-16.png)
+##### 周期挪用|窃取
+I/O优先(I/O>CPU访存)，若CPU访存，等其结束进行DMA   
+外设读写周期>主存
+
+![Alt text](images/CO_ep7_image-17.png)
 ##### DMA与CPU交替访问
 CPU工作周期比主存周期长  按一个主存周期和DMA轮换
 透明DMA 
-##### 周期挪用|窃取
-I/O优先，若CPU访存，等其结束进行DMA
+
+![Alt text](images/CO_ep7_image-18.png)
 #### DMA接口|DMA控制器
-MAC -Memory Address Counter  
-WC-Word Counter  
+MAC -Memory Address Counter主存地址计数器  
+WC-Word Counter传送字数计数器  
 ![Alt text](images/CO_ep7_image-6.png)
 #### 传送过程
 ##### 预处理
