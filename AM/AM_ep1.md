@@ -7,11 +7,6 @@
 定义域上为**偶函数** ->定积分的时候复合？
 ### 幂函数
 $y=x^a$
-
-a<0,
-$$
-y=\frac{1}{x^{-a}}
-$$
 ![  ](images/AM_ep1_image-6.png)
 1>a>0,
 $$
@@ -55,7 +50,6 @@ $$
 $$
 cos x 同理
 
-
 ### 反三角函数
 $$
 \arcsin x+\arccos x=\frac{\pi}{2}\\
@@ -71,7 +65,7 @@ $$
 
 1.端点求极限、代值
 $$
-\lim_{x\rightarrow0^+}x^x=\lim{x\rightarrow0^+}e^{x\ln x}=1
+\lim_{x\rightarrow0^+}x^x=\lim_{x\rightarrow0^+}e^{x\ln x}=1
 $$
 2.求导求极值渐进性
 $$
@@ -79,15 +73,31 @@ $$
 $$
 令$(x^x)'=0$得$x=\frac{1}{e}$
 
-$y=x^x ,y= x^{\frac{1}{x}}$
+$y=x^x ,y= x^{\frac{1}{x}}=^{x}\sqrt{x}$
 ![Alt text](images/AM_ep1_image-9.png)
 
 ### 特殊函数和图像
-一个很有意思的函数
+f(x)+f(-x)=1
 ![Alt text](images/AM_ep1_image-7.png) 
-内摆线弧度和圆不同
+奇函数  
+展开幂级数为
+$$
+2\sum_{n=0}^{\infty} \frac{x^{2n+1}}{2n+1}$$
+求导为$\frac{2}{1-x^{2}}$
+![Alt text](images/AM_ep1_image-10.png)
+内摆线弧度和圆不同  
+参数方程为
+$$
+\begin{cases}
+x=r\cos^{3}t\\
+y=r\sin^{3}t
+\end{cases}
+$$
+直角方程为  
+$$
+x^{\frac{2}{3}}+y^{\frac{2}{3}}=r^{\frac{2}{3}}
+$$
 ![Alt text](images/AM_ep1_image-8.png)
-
 ## 函数图像变换
 
 ## 极限
@@ -96,20 +106,15 @@ $y=x^x ,y= x^{\frac{1}{x}}$
 $$
 \lim_{n\rightarrow \infty}x_n=A
 $$
-
-
-
 数列极限只有一种趋向方式
-
 #### 存在极限的数列(收敛数列)
 收敛数列→有界
 >有界不一定收敛：1,-1,1,-1...
-#### 夹逼准则(可推广到函数)
-
+#### 夹逼准则
 
 #### 单调有界准则(不证明)
 单调有界→收敛
->收敛不一定单调有界$\{ (-1)^{n}/n \}$
+>收敛不一定单调有界$\{ \frac{(-1)^{n}}{n} \}$
 
 #### ~~柯西极限存在准则~~
 对于任意给定的正数$\varepsilon$，在数轴上一切足够大的号码的点$x_n$中，任意两点的举例小于$\varepsilon$
@@ -121,8 +126,6 @@ $$
 $$
 \left\vert x_n -x_m \right\vert <\varepsilon 
 $$
-
-
 #### 归结原则
 描述了数列极限与函数极限的关系  
 **定理** 设$\lim_{x\rightarrow x_0}f(x)$存在，$\{ x_n \}$为函数$f(x)$的定义域内任一收敛于$x_0$的数列，且$x_n\neq x_0$,则
@@ -155,7 +158,8 @@ $$
 **证** 
 $$
 \because \exist\lim_{x\rightarrow x_0} f(x)=A>0\\
-\therefore \forall\varepsilon>0,\exist\delta>0,当0<|x-x0|<\delta时，有\\
+\therefore \forall\varepsilon>0,\exist\delta>0,当0<|x-x0|<\delta
+时，有\\
 |f(x)-A|<\varepsilon \\
 不妨取\varepsilon=\frac{A}{2},则\\
 |f(x)-A|<\frac{A}{2}\\
@@ -238,21 +242,23 @@ TODO 间断点
 为什么一定要闭区间呢？？？？？？
 #### 有界性与最值定理
 **※`闭区间`连续函数必有界，且必能取到最大最小值**
-$$
-f(x)在闭区间I上连续\\
-\exist n,m,使得N\leq f(x)\leq M\\
-且\exist\xi_1,\xi_2\in I,使得f(\xi_1)=N,f(\xi_2)=M
-$$
+
+**定理** 若f(x)在闭区间I上连续，则$\exist n,m,$使得   
+$$N\leq f(x)\leq M$$  
+且$\exist\xi_1,\xi_2\in I$,使得   
+$$f(\xi_1)=N,f(\xi_2)=M$$
 
 太重要了你必须想起来，不难理解，但是你缺乏知识框架导致你想不到如何使用  
 在证明的时候放缩很好用吖，包括后面的一切的一切**中值定理**都是由这条性质引出的
 
-##### 零点定理??如何证超纲
+##### 零点定理
+
+**定理** 
+f(x)在区间I上有两个值f(a),f(b)，且f(a)$\cdot$f(b)<0，若f(x)在[a,b]连续，则  
+$\exist\xi\in(a,b)$使得
 $$
-f(x)在区间I上有两个值f(a),f(b)，f(a)\cdot f(b)<0\\
-若f(x)在[a,b]连续，则\exist\xi\in(a,b),f(\xi)=0
+f(\xi)=0
 $$
-好有意思，算法好你数学不好怎么行
 ##### 介值定理
 $$
 若f(x)在[a,b]连续,\\

@@ -56,6 +56,8 @@ $$
 $$
 S^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^{2}
 $$
+> 注意减的是$\overline{X}$,是无偏的
+
 **证** 计算无偏性，至少你的期望得为$\sigma^{2}$
 $$
 \begin{aligned}
@@ -66,8 +68,11 @@ $$
 &=\frac{1}{n-1}[n(\mathbb{E}(X)^{2}+D(X))-n(\mathbb{E}(\overline{X})^{2}+D(\overline{X}))]\\
 &=\frac{1}{n-1}[n(\mu^{2}+\sigma^{2})-n(\mu^{2}+\frac{\sigma^{2}}{n})]\\
 &=\sigma^{2}\\
-D(S^{2})&\overset{n=\infty}{\rightarrow}0
 \end{aligned}
+$$
+有效性
+$$
+D(S^{2})\overset{n=\infty}{\rightarrow}0
 $$
 故用$S^{2}$来近似$\sigma^{2}$
 ### 统计量$\chi^{2}$
@@ -85,7 +90,7 @@ $$
 \chi^{2}_a+\chi^{2}_b\sim\chi^{2}(n_1+n_2)
 
 $$
-2 数学期望和方差(背)
+2 数学期望和方差(**背**)
 $$
 E(\chi^{2}(n))=n;D(\chi^{2}(n))=2n
 $$

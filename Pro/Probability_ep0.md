@@ -1,3 +1,12 @@
+# 喝前摇一摇
+
+数字特征
+$$
+E(XY)=E(X)E(Y)+\operatorname{Cov}(X,Y)\\
+D(X\pm Y)=D(X)+D(Y)\pm 2\operatorname{Cov}(X,Y)\\
+\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)D(Y)}}
+$$
+
 # 【5】古典概型
 离散等可能  
 ## 随机分配问题

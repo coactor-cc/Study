@@ -49,7 +49,8 @@ $$
 
 傅里叶级数
 
-一型曲线积分的斯托克斯公式
+一型曲线积分的斯托克斯公式  
+要求：封闭，空间曲线
 $$
 \oint_\Gamma P {\rm d}x+Q{\rm d}y+R{\rm d}z=\iint_\Sigma \begin{vmatrix}
     {\rm d}y{\rm d}z & {\rm d}z{\rm d}x & {\rm d}x{\rm d}y \\
