@@ -8,6 +8,8 @@
 3.素材积累->形成装逼的语言：aspect个人品质，社会文化，科技，环境  
 4.实践：行文思路、语法纠正、时间把控->check 提升->实践
 
+
+
 ### 应用文
 #### 道歉信
 
@@ -27,7 +29,13 @@
 #### 2011
 The picture drips with sarcasm when it comes to how we treat our emvironment.The travellers are ~~throwing~~tossing trash around while boating on the lake,the remainders ~~flowing~~drifting at the surface.
 
-Behind such phenomenon lies in our lack of environmental awareness.People usually `in a rut of` consuming what ~~the~~ nature ~~have~~ has given to us,overlook~~ing~~ the magnitude of conservation. There exists a basic canon that the sustainable exploitation of  ~~nature~~ecosystem ~~lies in~~ ~~cautious~~*painstacking* ~~protection~~ care other than collective indifference.The man-nature relationship is not `a one way street` as most of us think it ought to .
+Behind such phenomenon lies in our lack of environmental awareness.~~People~~Folks usually `in a rut of` consuming what ~~the~~ nature ~~have~~ has given to us,overlook~~ing~~ the magnitude of conservation. There exists a basic canon that the sustainable exploitation of  ~~nature~~ecosystem ~~lies in~~ ~~cautious~~ need(需要)*painstacking* ~~protection~~ care other than collective indifference.The man-nature relationship is not `a one way street` as most of us think it ought to .
+
+For this reason,we should `leave no stone unturned` to reduce the production of  man-made pollutants to ease the burden of  our habitats.Also a perpetuating policy  to be enforced is required for it does have a generational cost to build a nourishing and vibrant home.
+
+
 
 flow 流动 液体 →   drift 漂浮，固态  
 cautious protection 谨慎的保护 → painstacking care 悉心的呵护
+
+

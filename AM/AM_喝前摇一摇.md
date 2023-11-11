@@ -2,9 +2,6 @@
 $$
 \frac{1}{x} \sqrt{x}\ln x \arcsin x
 $$
-归结原则
-
-
 
 极限的等价
 $$
@@ -26,6 +23,20 @@ $$\lim_{x\rightarrow \infty}[f(x)-kx]=b$$
 $$
 k=\frac{\left\vert y'' \right\vert }{[1+(y')^{2}]^{\frac{2}{3}}}=\frac{1}{R}
 $$
+
+
+弧微分
+$$
+{\rm d}s=\sqrt{({\rm d}x)^{2}+({\rm d}y)^{2}}\\
+=
+\begin{cases}
+\sqrt{1+y'^{2}}{\rm d}x   , y\rightarrow x\\ 
+\sqrt{\varphi^{2}(t)+\psi^{2}(t)}{\rm d}t ,x,y\rightarrow t\\
+\sqrt{r^{2}+r'^{2}(\theta)}{\rm d}\theta,r\rightarrow \theta
+\end{cases}
+$$
+
+
 积分公式：
 $$
 \int_{}^{}\sec x{\rm d}x=\int_{}^{}\frac{1}{\cos x}{\rm d}x=\\
@@ -37,6 +48,22 @@ $$
 $$
 \int_{}^{}e^{ax}\cos bx{\rm d}=\\\frac{1}{a^{2}+b^{2}}[(e^{ax})'\cos bx-(\cos bx)'e^{ax}]
 $$
+参数方程积面积
+
+$$
+\begin{cases}
+x=\varphi(t)\\
+y=\psi(t)
+\end{cases}\\
+A=\int_{\varphi^{-1}(a)}^{\varphi^{-1}(b)}\psi(t){\rm d}\varphi(t)
+$$
+极坐标积面积
+$$
+A=\int_{\alpha}^{\beta}\frac{1}{2}r^{2}(\theta){\rm d}\theta
+$$
+
+
+
 欧拉方程
 $$
 x^{2}y''+pxy'+qy=f(x),(x>0)

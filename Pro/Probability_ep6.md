@@ -99,7 +99,7 @@ $$
 P\{ X> \chi^{2}_\alpha(n) \}=\alpha
 $$
 ### 统计量t
-若$X\sim N(0,1),Y\sim\chi^{2}(n)$则
+若$X\sim N(0,1),Y\sim\chi^{2}(n)$，且`X，Y相互独立`则
 $$
 t=\frac{X}{\sqrt{Y/n}}
 $$
@@ -108,7 +108,7 @@ $$
 t\sim t(n)
 $$
 
-1维/n维的函数
+>应用：正态总统下： $\overline{X}$与$S^{2}$相互独立，而$\overline{X}$与$\sum_{i=1}^{n}{(X_i-\mu)^{2}}$不独立
 #### 上$\alpha$分位点
 由于图像具有对称性
 $$
@@ -119,7 +119,7 @@ $$
 E(t(n))=0
 $$
 ### 统计量$F$
-若$U\sim\chi^{2}(n_1),V\sim\chi^{2}(n_2)$,则统计量
+若$U\sim\chi^{2}(n_1),V\sim\chi^{2}(n_2)$,且`U，V相互独立`,则统计量
 $$
 F=\frac{U/n_1}{V/n_2}
 $$
@@ -132,19 +132,28 @@ $$
 F_{1-\alpha}(n_1,n_2)=\frac{1}{F_\alpha(n_2,n_1)}
 $$
 
+#### 
+$$
+t(n)^{2}\sim F(1,n)
+$$
+
 ### 正态总体下的常用结论
 若总体$X\sim N(\mu,\sigma^{2})$，则有$\mathbb{E}(X)=\mu,D(X)=\sigma^{2}$，则  
 1
 $$
 \overline{X}\sim N(\mu,\frac{\sigma^{2}}{n})
 $$
-2 好怪锕
+2 
 $$
 \frac{(n-1)S^{2}}{\sigma^{2}}\sim\chi^{2}(n-1)
 $$
 3
 $$
 \frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n-1)
+$$
+4
+$$
+\frac{{\overline{X}-\mu}^{2}}{S/n}\sim F(1，n-1)
 $$
 ## 参数的估计
 猜测模型的参数
