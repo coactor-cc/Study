@@ -40,6 +40,16 @@ $$
 $$
 
 
+$\alpha$分位数与$\Phi(x)$,设随机变量$X\sim N(\mu,\sigma^{2})$,则
+$$
+\Phi(t)=P\{ X \leq t \}\\
+P\{ X>t \}=1-\Phi(t)=\Phi(-t)\\
+P\{ X>x \}=\alpha\\
+X_\alpha=-t
+
+$$
+
+
 
 
 # 【5】古典概型
