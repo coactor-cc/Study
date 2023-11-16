@@ -75,6 +75,17 @@ $$
 
 
 傅里叶级数
+$$
+a_n=\frac{1}{l}\int_{-l}^{l}f(x)\cos \frac{n\pi}{l}x {\rm d}x\\
+b_n=\frac{1}{l}\int_{-l}^{l}f(x)\sin \frac{n\pi}{l}x {\rm d}x\\
+f(x)\sim \frac{a_0}{2}+\sum_{i=1}^{n}(a_n\cos \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x)
+$$
+特殊的，当$l=\pi$时
+$$
+a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nx {\rm d}x\\
+b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nx {\rm d}x\\
+f(x)\sim \frac{a_0}{2}+\sum_{i=1}^{n}(a_n\cos  nx+b_n\sin  nx)
+$$
 
 一型曲线积分的斯托克斯公式  
 要求：封闭，空间曲线

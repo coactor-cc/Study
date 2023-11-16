@@ -202,8 +202,20 @@ A^{*}=
 A^{-1} 
 $$
 ## 矩阵分块
-### 分块对角矩阵的逆
-主对角分块
+### 幕
+$$
+\begin{bmatrix}
+    A & 0 \\
+    0 & B \\
+\end{bmatrix}^{n}
+=
+\begin{bmatrix}
+    A^{n} & 0 \\
+    0 & B^{n} \\
+\end{bmatrix}
+$$
+### 分块矩阵的逆
+#### 主对角分块
 $$
 A=\begin{bmatrix}
     A_1  &0  &\cdots&0  \\
@@ -219,7 +231,7 @@ A^{-1}=
     0  &0  &\cdots&A_s^{-1}   
 \end{bmatrix}
 $$
-副对角分块  
+#### 副对角分块  
 分块倒序，块内求逆  
 $$
 A=\begin{bmatrix}
@@ -236,8 +248,9 @@ A^{-1}=
     A_1^{-1}    &\cdots&0&0   
 \end{bmatrix}
 $$
-三角矩阵
-左乘同行，右乘同列，添加负号
+#### 三角矩阵
+主对角：左乘同行，右乘同列，添加负号
+副对角：`倒序`+左乘同行，右乘同列，添加负号
 $$
 X=
 \begin{bmatrix}
@@ -249,4 +262,59 @@ X^{-1}=
     A^{-1} & 0 \\
     -B^{-1}CA^{-1} & B^{-1} \\
 \end{bmatrix}
+$$
+### 舒尔公式
+`当A可逆时`
+#### i行变换
+$$
+\begin{bmatrix}
+    E_r & 0 \\
+    CA^{-1} & E_{n-r} \\
+\end{bmatrix}
+\begin{bmatrix}
+    A & B \\
+    C & D \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    A & B \\
+    0 & D-CA^{-1}B \\
+\end{bmatrix}
+$$
+#### ii 列变换
+$$
+\begin{bmatrix}
+    A & B \\
+    C & D \\
+\end{bmatrix}
+\begin{bmatrix}
+    E_r & -A^{-1}B \\
+    0 & E_{n-r} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    A & 0 \\
+    C & D-CA^{-1}B \\
+\end{bmatrix}
+$$
+#### iii 化为对角
+$$
+\begin{bmatrix}
+    E_r & 0 \\
+    CA^{-1} & E_{n-r} \\
+\end{bmatrix}
+\begin{bmatrix}
+    A & B \\
+    C & D \\
+\end{bmatrix}
+\begin{bmatrix}
+    E_r & -A^{-1}B \\
+    0 & E_{n-r} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    A & 0 \\
+    C & D-CA^{-1}B \\
+\end{bmatrix}
+
 $$

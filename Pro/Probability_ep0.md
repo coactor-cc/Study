@@ -1,8 +1,17 @@
 # 喝前摇一摇
+二项分布概率最大的取值，
+$$
+k=\left\lceil (n+1)p \right\rceil 
+$$
+若(n+1)p为整数继续向下取一位   
+几何分布  
+无记忆性  
 泊松分布
 $$
 P\{ X=k \}=\frac{\lambda^{k}{\rm e}^{-\lambda}}{k!},k=1,2,\cdots
 $$  
+泊松定理 $\lambda=np$用泊松估计二项概率
+
 指数分布
 $$
 f(x)=
@@ -14,6 +23,11 @@ f(x)=
 \end{cases}
 $$
 
+
+切比雪夫不等式
+$$
+P\{ \left\vert X-\mu \right\vert \geq \varepsilon  \}\leq \frac{\sigma^{2}}{\varepsilon ^{2}} 
+$$
 
 数字特征
 $$
