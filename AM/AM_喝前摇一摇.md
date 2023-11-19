@@ -48,8 +48,11 @@ $$
 $$
 \int_{}^{}e^{ax}\cos bx{\rm d}=\\\frac{1}{a^{2}+b^{2}}[(e^{ax})'\cos bx-(\cos bx)'e^{ax}]
 $$
-参数方程积面积
+华理士公式及其推论
 
+
+
+参数方程积面积
 $$
 \begin{cases}
 x=\varphi(t)\\

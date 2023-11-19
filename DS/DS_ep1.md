@@ -37,9 +37,11 @@ ListEmpty
 删除
 
 查找
+#### 双向链表、附加头节点、循环
+
+lLink、Data、rLink
+![Alt text](images/DS_ep1_image.png)
+
+>考点：尾节点的rLink指向head而不是第一个元素
 
 
-#### 分类
-双链表
-循环链表
-静态链表
