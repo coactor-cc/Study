@@ -227,6 +227,7 @@ void Increment(int& value)
 	int a = 5;
 	Increment(a);
 ```
+
 ## 类和面向对象编程class|struct
 只是一种编程方式，但是java、C#只能进行面向对象编程，C又没有入口  
 class 类类型的变量名  
@@ -275,7 +276,9 @@ Entity u=Entity(parameter);
 ```
 如果能放在stack就放在stack里
 #### heap实例化
-一旦你new了，you are actually responsible to free that memory,它不像java会自动处理这些事情  
+一旦你new了，you are actually responsible to free that memory,它不像java会自动处理这些事情 
+
+
 ```C++
 Entity* entity=new Entity(parameter);
 (*entity).Getname();
@@ -283,8 +286,8 @@ entity->Getname();\\ 与上一语句相同
 delete entity;
 ```
 由于entity是一个指针，所以先需要dereference 然后再调用内容  
-或者我们使用箭头运算符
-TODO 未来介绍箭头运算符  
+#### ->运算
+见上例
 ### 构造函数
 没有返回值，与类名一致；  
 default construct  do noting
