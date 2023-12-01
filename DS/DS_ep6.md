@@ -10,6 +10,8 @@
 时间复杂度  
 空间复杂度  
 **稳定性**：序列中关键字相同元素的**位序在排序前后是否改变**
+
+>趟数：排序过程中，对尚未确定最终未知的所有元素进行一遍处理称为一趟#快排勿Q
 ## 插入排序
 是一种原地排序
 取出元素→查找在有序表中位置→插入有序表
@@ -84,8 +86,24 @@ so easy
 2轮：从上到下
 举反例证明不稳定
 ## 归并排序
-空间复杂度o(n)
-时间复杂度o(nlog n)
+基于分治思想，将待排元素序列分成等长子序列，对每个子序列排序，然后合并成一个序列
+```c++
+datalist mergeSort(datalist &L){
+    if(Length(L)<=1) return L;
+    datalist L1=L[0,length/2-1];
+    datalist L2=L[lenth/2,length-1];
+    return mergeSort(mergeSort(L1),mergeSort(L2));
+}
+```
+![Alt text](images/DS_ep6_image.png)
+### 特性分析
+归并排序时间`不依赖于`元素初始序列  
+`稳定`  
+空间复杂度$\Omicron(n)$   
+时间复杂度(最好、最坏、平均)$\Omicron(n\log_2 n)$
+
+### 迭代实现与In-place
+![Alt text](images/DS_ep6_image-1.png)
 ## 基数排序
 利用key=int 进行位数排序
 需要一个数组列表

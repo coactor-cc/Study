@@ -238,20 +238,20 @@ BYTE _outp(unsigned short usPort，BYTE btData);
 #### 访问接口的时机
 取决于软件、I/O控制方式(如查询/中断)
 ## I/O控制方式`外设传输数据的方式`
+### ~~直接传送~~
+无控制和状态口，直接传，如拨码开关、LED
+![Alt text](images/CO_ep7_image-20.png)
 ### 程序查询|轮询
 多用于字符设控制  
 思想：设备启动→循环查询设备工作状态→就绪→传送  
 特点：CPU在此期间不能做其他事情，外设CPU串行工作
-
 #### 独占查询
 启动后立即开始查询
 #### 定时查询
 启动后间隔一段时间开始查询  
 ![Alt text](images/CO_ep7_image-3.png)  
 #### I/O接口组织
-数据线、控制线、应答线  
-![Alt text](images/CO_ep7_image-15.png)
-![Alt text](images/CO_ep7_image-9.png)
+![Alt text](images/CO_ep7_image-19.png)
 ### 程序**中断**I/O方式
 执行启动外设指令→外设就绪→I/O请求→中断响应→中断处理→中断返回  
 将I/O请求作为可屏蔽中断请求，
@@ -259,28 +259,7 @@ BYTE _outp(unsigned short usPort，BYTE btData);
 向下兼容查询方式EI  
 中断请求INT
 中断响应INTA
-TODO 图  
-#### 中断系统
-##### 中断请求的检测和响应组织
-处理响应时中断源的识别
-##### 中断控制器IC
-TODO 看IC的组成  
-![Alt text](images/CO_ep7_image-8.png)
-#### 中断系统举例
-TODO 好好理解它 8086 
-![Alt text](images/CO_ep7_image-4.png)
-#### 多级中断
-##### 支持多级中断的IC
-![Alt text](images/CO_ep7_image-7.png)
-TODO   8259A
-##### 中断屏蔽的组织
-硬件：中断屏蔽寄存器按位与中断请求信号 
-软件—中断处理程序可修改屏蔽字(写中断屏蔽REG)  
-![Alt text](images/CO_ep7_image-5.png)  
-术语：  
-优先级—指请求的响应优先级   
-响应优先级—请求的排队次序(排队器A的编码次序)(IRR的复位次序)←硬件决定  
-处理优先级—请求的完成次序(ISR的复位次序)←软件修改  
+![Alt text](images/CO_ep7_image-21.png)
 ### **DMA**控制方式
 磁盘需求；磁盘→DDR   
 利用DMA接口传输，相当于总线让DMA作为主设备，MEM作为从设备   

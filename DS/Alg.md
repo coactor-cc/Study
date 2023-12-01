@@ -109,3 +109,15 @@ void inorder(TreeNode* root, vector<int>& res) {
         return res;
     }
 ```
+
+## 后续遍历二叉树及节点层次
+```c++
+void postorder(TreeNode* root,int level=1) {
+        if (!root)  return 0;
+        postorder(root->left,level+1);
+        postorder(root->right,level+1);
+        cout<<root->data<<level<<endl;
+    }
+```
+
+## 二叉搜索树的后序遍历合法性
