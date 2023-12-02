@@ -251,7 +251,7 @@ BYTE _outp(unsigned short usPort，BYTE btData);
 启动后间隔一段时间开始查询  
 ![Alt text](images/CO_ep7_image-3.png)  
 #### I/O接口组织
-![Alt text](images/CO_ep7_image-19.png)
+![Alt text](images/CO_ep7_image-22.png)
 ### 程序**中断**I/O方式
 执行启动外设指令→外设就绪→I/O请求→中断响应→中断处理→中断返回  
 将I/O请求作为可屏蔽中断请求，
