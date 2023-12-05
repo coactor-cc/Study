@@ -1,3 +1,29 @@
+# 串KMP匹配
+思路：剪枝   
+利用：当字串在第k位和主串不匹配时，主串前k-1位一定与字串保持一致
+
+step 1:分析字串
+case:k=n,n-1...1  
+step 2:进行匹配
+
+```c++
+int Index_KMP(String S,String T,int next[]){
+    int i=1,j=1;
+    while(i<=S.length&&j<=T.length){
+        if(j==0||S.ch[i]==T.ch[i]){
+            ++i;
+            ++j;
+        }
+        else
+            j=next[j];
+    }
+    if(j>T.length)
+        return i-T.length;
+    else 
+        return 0;
+
+}
+```
 # 动态规划
 ## 最长回文字
 ![Alt text](images/Alg_image-1.png)
