@@ -45,7 +45,7 @@ The image vividly depicts a conversation between a son and his father, raising c
 At first glance, this is simply a common growing-up setback.    Deep down, the not-to-be-negligible dilemmas can be found `in` how we seek out and develop our own hobbies.    Admittedly, we can be carefree, swept `along` by the tide of sound around us, engaged in the entertainments peddled by the majority.     It does not feel like a stretch to say that this is precisely what most people do in a rut.   Still, we, by contrast, have an alternative in seeking inwardness and devoting ourselves to beloved causes, which do bolster inner `contentment` and fuel `self-aggrandizement`.     Specifically, finding enthusiasm within oneself is not `a` form of narcissism, but rather a combination of wit to ruminate on identity and grit to remain independent.
 
 In a nutshell, more attention could have been given to hobby development during the growth period.  Not just individuals, but entire communities would get a lot of that.
-
+# 模板
 ## 文章的引入
 简练、自然：不要用奇奇怪怪的句式
 ### 阐述现象型引入

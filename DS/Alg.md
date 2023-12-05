@@ -32,6 +32,8 @@ void solution(int *arg,int length,int s){
     cout<<min<<endl;
 }
 ```
+## 408 2021 cmpCountSort
+
 
 
 ## 935 2018 所有sum=k的区间
@@ -120,4 +122,26 @@ void postorder(TreeNode* root,int level=1) {
     }
 ```
 
-## 二叉搜索树的后序遍历合法性
+## 二叉树的顺序存储遍历
+
+```c++
+bool Inorder(SqBiTree T,int k,int *val){
+
+    if(k<T.ElemNum&&T.SqBiTree[k]!=-1){
+        //若访问未越界且节点存在
+            if(!Inorder(T,2*k+1,*val))
+            //返回递归左子树的判断结果
+                return false;
+            if(T.SqBiTree[k]<= *val)
+            //若当前值未按增序排列,以1为例
+                return false;
+            //维护val使其最大
+            *val=T.T.SqBiTree[k];
+            if(!Inorder(T,2*(k+1),*val))
+            //若右子树不合规，传递false
+                return false;
+    }
+    return ture;
+}
+```
+
