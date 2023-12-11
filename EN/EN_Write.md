@@ -27,6 +27,28 @@
 
 7时态错误
 ### 应用文
+#### 2017 邀请信
+Dear Prof.Bruce
+
+An international innovation contest will be held at our university from Dec. 21st to Dec. 25th and we are very glad to invite you to participate.
+
+The innovation contest, aiming at cultivating innovative awareness as well as fostering practical abilities, adopts a team-oriented form, which demands a mentor with 3-4 undergraduates to enroll.​ In view of your experienced instruction, your attendance is bound to grace our activities.  
+
+More details can be found in the attached file.Please confirm your availability on or before Nov. 1st by replying to this email.  We would be obliged if you could come with us.
+
+Kind regards!  
+Li Ming
+#### 2022 回复信
+To whom it may concern，
+
+Thanks for your inquiry.  It's my pleasure to address your puzzles ~~with details~~  `at length`.
+
+ Kids in rural areas, dwarfed by "the golden spoons", ~~badly~~desperately need our helping hands.  Our tasks lie in yielding high-quality lectures`,` as well as cultivating a comprehensive teaching architecture.  The basic demands for volunteers, as you mentioned, involve credibility, organizing ability and easy-going personality and priority and `preference` will be given to those experienced, either in organizational practices or in other similar activities.
+
+Should you have any other questions，do not hesitate to `trouble` us. We ~~I~~ would be disposed to help you out.
+
+Sincerely  
+Li Ming
 #### 道歉信
 
 ### 大作文
