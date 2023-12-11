@@ -281,9 +281,9 @@ int IsExistEL(MGraph G){
             if(G.Edge[v][e])
                 degree[v]++;
     for(int i=0;i<n;i++)//遍历degree，奇数v
-        if(degree[i]mod 2==1)
+        if(degree[i]%2==1)
             count++;
-    if(count==2&&count==0)//条件判断
+    if(count==2||count==0)//条件判断
         return 1;
     return 0;
 }
