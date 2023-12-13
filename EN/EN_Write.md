@@ -27,8 +27,20 @@
 
 7时态错误
 ### 应用文
+#### 邀请信
+Dear Prof. James,
+
+Words fail me in conveying my welcome to your arrival, and it is a great `privilege` to share a sought-after tourist attraction that may fascinate you.
+
+The Great Wall, hailed as one of the world's greatest wonders, took shape over the course of generations of ancestors' efforts. `Amid` sightseeing, you will be immersed in the `sophisticated` ancient crafts and the painstaking efforts, which are bound to form a unique experience.  By the way, detailed English introduction can be found from official websites.
+
+I will be delighted if my humble recommendation counts.  Wish you a nice trip!
+
+Sincerely  
+Li Ming
+
 #### 2017 邀请信
-Dear Prof.Bruce
+Dear Prof.Bruce,
 
 An international innovation contest will be held at our university from Dec. 21st to Dec. 25th and we are very glad to invite you to participate.
 
@@ -39,7 +51,7 @@ More details can be found in the attached file.Please confirm your availability 
 Kind regards!  
 Li Ming
 #### 2022 回复信
-To whom it may concern，
+To whom it may concern,
 
 Thanks for your inquiry.  It's my pleasure to address your puzzles ~~with details~~  `at length`.
 
