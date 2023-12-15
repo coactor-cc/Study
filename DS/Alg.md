@@ -1,4 +1,43 @@
+# 链表
+## 倒数K(408 2009)
+
+## 后缀串(408 2012)
+
+## 删重复(408 2015)
+```c++
+void del(Node *head,int n){
+    Node * node=head->next;
+    bool a[n];
+    for(int i=0;i<n;i++)
+        a[i]=0;
+    while(node!=null){
+        if(a[node->data]!=0)
+            del(node);
+        a[node->data]=1;
+        node=node->link;
+    }        
+}
+void del(Node *node){
+    Node * p=node->next;
+    node->next=node->next->next;
+    delete p; 
+}
+```
+
+
 # 数组
+## 三元组最小距离 (408 2020)
+```c++
+int S1[],S2[],S3[];升序，输出所有拥有最小距离和的三元组(a,b,c)
+```
+思想：遍历所有三元组，得到k 输出。(无优化)寻找剪枝可能性，固定两个 ，剩余一个只有在两者之间的时候最小，
+
+```c++
+void mindis(int S1[],int n,int S2[],int m,int S3[],int q){ 
+
+
+}
+```
 ## 最小>s区间[滑动窗口简介]
 滑动窗口法，也叫尺取法，可以用来解决一些查找满足一定条件的连续区间的性质（长度等）的问题。由于区间连续，因此当区间发生变化时，可以通过旧有的计算结果对搜索空间进行剪枝，这样便减少了重复计算，降低了时间复杂度。往往类似于“请找到满足xx的最x的区间（子串、子数组）的xx”这类问题都可以使用该方法进行解决
 
