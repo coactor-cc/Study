@@ -32,7 +32,7 @@ Dear Prof. James,
 
 Words fail me in conveying my welcome to your arrival, and it is a great `privilege` to share a sought-after tourist attraction that may fascinate you.
 
-The Great Wall, hailed as one of the world's greatest wonders, took shape over the course of generations of ancestors' efforts. `Amid` sightseeing, you will be immersed in the `sophisticated` ancient crafts and the painstaking efforts, which are bound to form a unique experience.  By the way, detailed English introduction can be found from official websites.
+The Great Wall, hailed as one of the world's greatest wonders, took shape over the course of generations of ancestors' efforts. `Amid` sightseeing, you will be immersed in the `sophisticated` ancient crafts and the painstaking efforts, which are bound to form a unique experience.  By the way, detailed English introduction is available from official websites.
 
 I will be delighted if my humble recommendation counts.  Wish you a nice trip!
 
@@ -42,11 +42,13 @@ Li Ming
 #### 2017 邀请信
 Dear Prof.Bruce,
 
-An international innovation contest will be held at our university from Dec. 21st to Dec. 25th and we are very glad to invite you to participate.
+A proposed 4-day innovation contest will be held on December 24-27,2023 in our university,Beijing,China and we are very glad to invite you for participation.
 
-The innovation contest, aiming at cultivating innovative awareness as well as fostering practical abilities, adopts a team-oriented form, which demands a mentor with 3-4 undergraduates to enroll.​ In view of your experienced instruction, your attendance is bound to grace our activities.  
+The innovation contest, revolving around cultivating innovative awareness as well as fostering practical abilities, adopts a team-oriented form, which demands a mentor with 3-4 undergraduates to enroll.​ In view of your ample experience in instruction, your attendance is bound to grace our events.  
 
-More details can be found in the attached file.Please confirm your availability on or before Nov. 1st by replying to this email.  We would be obliged if you could come with us.
+More details can be found in the attached file.Please confirm your availability  before Nov. 1st by replying to this email. 
+
+We would be obliged if you could come with us.Looking forward to hearing from you soon.
 
 Kind regards!  
 Li Ming
