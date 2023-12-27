@@ -1,4 +1,8 @@
 # 试题结构
+DDABA 2102
+ABDCB 1211
+BCCDA 1121  BCDBC 0221
+ABADB 2201
 ## 英语知识运用$10=20\times 0.5$
 240~280word
 
