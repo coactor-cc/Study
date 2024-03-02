@@ -676,7 +676,9 @@ int * createarray(){
 mutex locking
 
 ### smart point
-
+```c++
+// this is the smart point 
+```
 #### unic point 
 在heap上实现的栈作用域指针
 #### share point
