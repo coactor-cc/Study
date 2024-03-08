@@ -683,3 +683,36 @@ mutex locking
 在heap上实现的栈作用域指针
 #### share point
 
+### <array>
+
+
+```c++
+#include <array>
+int main()
+{
+	std::array<int,5>data;
+	data[0]=2;
+	data[4]=1;
+
+	int dataOld[5];
+	dataOld=0;
+	std::cin.get();
+}
+```
+why use static array ?
+array is create on the stack not the heap
+
+### funtion point
+```c++
+#include<iostream>
+void Helloworld()
+{
+	std::cout<<"Hello world"<<std::endl;
+}
+int main(){
+	auto function = &Helloworld;
+	std::cin,get();
+}
+```
+### lambda函数
+一种匿名函数
