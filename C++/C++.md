@@ -716,3 +716,43 @@ int main(){
 ```
 ### lambda函数
 一种匿名函数
+
+### cast  
+#### const_cast<>()
+用于常量指针转化为变量指针
+#### dynamic_cast()
+基类指针转化为派生类指针，会检测是否可转化
+#### static_cast()
+常用
+#### reinterpret_cast
+强制类型转换
+### 指向成员函数的指针
+此处指代访问非静态成员函数
+```c++
+class Test {
+	int x;
+	int y;
+public:
+	Test(int i, int j = 0) :x(i), y(j) {};
+	int get(int i, int j) {
+		return i + j;
+	}
+};
+
+int main() {
+ 
+	Test t1(2), t2(4, 6);
+	int (Test:: * p)(int, int );
+	p = &Test::get;//注意在赋值时候需要取地址
+	cout << (t1.*p)(5,10) << endl;
+	Test* p1 = &t2;
+	cout << (p1->*p)(7, 20) << endl;
+
+}
+```
+### while中使用赋值语句
+```c++
+while(a=1){
+
+}
+```
