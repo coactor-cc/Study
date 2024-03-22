@@ -50,10 +50,20 @@ int main() {
 	is.close();
 }
 ```
+## 进制转换和输出ASCII的值
+```c++
+cout<<hex//16
+cout<<oct//8
+```
+二进制
+```c++
+#include<bitset>
+   cout <<"二进制："<<bitset<10>(num) <<endl; //10是二进制位数，自定义为多少输出就是多少位，高位补0
+```
 
 # 字符数组处理
-不允许使用C++ STL，也就是说string类没法用
-能不能用cstring？？
+不允许使用C++ STL，也就是说string类没法用,能不能用cstring？？
+string 比const char* /char[]好用多了
 ## cstring char*的处理
 ### strcpy()
 char* strcpy(char* dis,const char* source);
@@ -70,18 +80,23 @@ else:strtok(NULL," ,;");
 ### int<->char
 ![Alt text](images/IO&Str_image.png)
 
-
-## string 
-### string<->char* c_str()
+## [string]() 
+### string function
+#### string substr(int begin,int end)
+#### int size()
+#### begin()
+#### end()
+#### reverse(string)
+### string<->char* 
+c_str()
 ```c++
 char * new;
 string s="sjdak";
-strcpy(new,s.c_str())
+strcpy(new,s.c_str());
 ```
-
 # int<->string
 ## int->string
-### string库
+### string库to_string()
 ```c++
 #include<string>
 int x;
@@ -101,7 +116,7 @@ inline string toString(const T &v){
 }
 ```
 ## string->int
-### 数值判断法
+### 数值判断法(const char*通用)
 ```c++
 string s = "123";
 int num = 0;
@@ -109,8 +124,8 @@ for (int i=0; i<s.size(); ++i) {
     num = 10 * num + (s[i] - '0');
 }
 ```
-### ato函数
-包含 atoi(int),atof(float),atol(long)
+### ato函数 `好用`
+包含 int atoi(""),float atof(""),long atol("")
 ```c++
 string s = "123";
 int num = atoi(s.c_str());
@@ -138,6 +153,5 @@ for(i=0;i<=temp.end();i++)
 	if(temp2[i]!=temp[i])
 		return false;
 return true;
-
 ```
 

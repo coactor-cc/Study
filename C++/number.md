@@ -30,6 +30,21 @@ vector<int> get_factor(int n){
     return factor;
 }
 ```
+## 最大公因数
+
+```c++
+//辗转相除法
+int gcd(int a, int b){
+    return b == 0 ? a : gcd(b, a % b);
+}
+```
+## 最小公倍数
+```c++
+//a*b/gcd =lcm
+int lcm(int a,int b){
+	return a / gcd(a,b) * b;//先除后乘，以免溢出64位整数
+}
+```
 
 ## 完全数【2018_1】
 如果一个数恰好等于它的真因子之和，则称该数为“完全数    

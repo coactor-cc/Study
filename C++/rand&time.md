@@ -11,4 +11,6 @@ int rand(void);//产生随机整数
 ```c++
 #include<ctime>
 srand(time(0));// 利用time的功能实现随机
+//设置一次只后无需再设置
+rand();
 ```
