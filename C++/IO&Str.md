@@ -1,4 +1,6 @@
 # I/0
+
+
 ## Input
 ### <<
 ### cin.get()
@@ -50,7 +52,7 @@ int main() {
 	is.close();
 }
 ```
-## 进制转换和输出ASCII的值
+### 进制转换和输出ASCII的值
 ```c++
 cout<<hex//16
 cout<<oct//8
@@ -59,6 +61,10 @@ cout<<oct//8
 ```c++
 #include<bitset>
    cout <<"二进制："<<bitset<10>(num) <<endl; //10是二进制位数，自定义为多少输出就是多少位，高位补0
+```
+### 简单输出格式
+```c++
+cout<<fixed<<left<<setw(15)<<setpersition(2)// 设置宽度， 设置小数点
 ```
 
 # 字符数组处理
