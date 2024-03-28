@@ -279,6 +279,9 @@ Entity u=Entity(parameter);
 一旦你new了，you are actually responsible to free that memory,它不像java会自动处理这些事情 
 
 
+new创建对象需要指针接收，一处初始化，多处使用  
+new创建对象使用完需delete销毁  
+new创建对象直接使用堆空间，而局部不用new定义对象则使用栈空间  
 ```C++
 Entity* entity=new Entity(parameter);
 (*entity).Getname();
@@ -384,6 +387,7 @@ int main()
 ```c++
 class Printable
 {
+public:
 	virtual std::string GetClassName()=0；
 }
 class Entity；public Printable
@@ -473,7 +477,7 @@ C++标准库数组，安全但是开销大了点
 #include<array>
 std::array<int,5>another;
 ```
-## sting
+## string
 a group of characters ,useful in allocating buffer;
 character sets;  
 an array of characters;
@@ -481,14 +485,19 @@ an array of characters;
 const char* name="sjksad";
 //你不能修改字符数组中的值
 char* name="sjksad";
+//未封口
 char name[6]={'C','h','e','r','o'}
 ```
-**空终止符00 \0** 
+**空终止符00 \0**   
 双引号默认为const char* 
 ASCII NULL 00
 
-C++标准库由string类
-std::string:char array+a bunch of fuctions and manipulate
+### C++标准库由string类
+```c++
+#include<string>
+std::string a;
+```
+char array+a bunch of fuctions and manipulate
 find()
 ```c++
 include<string>
@@ -512,7 +521,8 @@ const char name[8]="Che\0rno";
 std::cout<<strlen(name)<<std::endl;
 console:3
 ```
-将const char array 传给char* 进行访问是一种未定义行为  
+>将const char array 传给char* 进行访问是一种未定义行为  
+
 mapc  字符串存在逻辑rom部分中 写在const SEGMENT 中，
 在release mod 下这不会成功，debug下直接编译错误
 ```c++
@@ -546,16 +556,16 @@ else
 	s_speed =5;
 
 s_speed= s_level>5?10:5;
-std::string rank=s_level>10?"Master":"new";//这里不需要创建临时变量，会更快
+std::string rank=s_level>10?"Master":"new";
+//这里不需要创建临时变量，会更快
 TODO 返值优化  
-
 ```
 ## static 数据的共享与保护
 ### 全局static
-表示链接时该函数或者变量只对该translation unit 有用  
-它将不会被include到其他translation unit 中
-extern 向外部translation unit找声明
-**尽量给一个cpp文件中的类外变量，全局变量+static关键字；**
+表示链接时该函数或者变量只对该translation unit 有用    
+它将不会被include到其他translation unit 中  
+extern 向外部translation unit找声明  
+**尽量给一个cpp文件中的类外变量，全局变量+static关键字；**  
 由于是顺序编译，变量定义往上放放最上面？？？
 ### 局部static
 变量的生存期和作用范围
@@ -563,12 +573,11 @@ static local variable 允许我们建立一个局部作用范围，却有着整�
 用于函数counter 
 ### 类或结构体内
 可用于描述一个竞争资源或一个有限的实体，如处理机
-类内或结构体内的变量
-share menorys with all instances in the class 
+类内或结构体内的变量  
+share menorys with all instances in the class   
 static mathod 不会自动获取类实例的隐藏变量，只能抓到静态变量
-
-
 ```c++
+//错误代码 勿Q
 #include<iostream>
 struct Entity
 {
@@ -643,8 +652,8 @@ void Print(const Entity &e)
 找空闲分区表 连续分配并调用构造函数
 你可以overwrote it
 ```c++
-Entity e=new Entity();
-Entity e=(*Entity)malloc(sizeof(Entity))
+Entity *e=new Entity();
+Entity *e=(*Entity)malloc(sizeof(Entity))
 //这两者只有是否调用构造函数的区别
 
 delete e;
@@ -663,15 +672,12 @@ java 和c#只支持部分op的重载，而c++支持对op的完全控制
 ### heap和stack的object scope
 ```c++
 //错误代码 ，无效的创建数组函数，因为该数组在函数内部就g了
-int * createarray(){
+int* createarray(){
 	int array[50];
 	return array;
-
 // 返回的是一个内存stack 的 指针 ，可惜这片空间已经被释放了
 }
-
 ```
-
 可以创建一个作用域指针类 smart point unic point
 mutex locking
 
@@ -685,7 +691,6 @@ mutex locking
 
 ### <array>
 
-
 ```c++
 #include <array>
 int main()
@@ -693,7 +698,7 @@ int main()
 	std::array<int,5>data;
 	data[0]=2;
 	data[4]=1;
-
+//???
 	int dataOld[5];
 	dataOld=0;
 	std::cin.get();
@@ -711,21 +716,10 @@ void Helloworld()
 }
 int main(){
 	auto function = &Helloworld;
-	std::cin,get();
+	function();
+	std::cin.get();
 }
 ```
-### lambda函数
-一种匿名函数
-
-### cast  
-#### const_cast<>()
-用于常量指针转化为变量指针
-#### dynamic_cast()
-基类指针转化为派生类指针，会检测是否可转化
-#### static_cast()
-常用
-#### reinterpret_cast
-强制类型转换
 ### 指向成员函数的指针
 此处指代访问非静态成员函数
 ```c++
@@ -742,20 +736,30 @@ public:
 int main() {
  
 	Test t1(2), t2(4, 6);
-	int (Test:: * p)(int, int );
+	int (Test::* p)(int, int );
 	p = &Test::get;//注意在赋值时候需要取地址
 	cout << (t1.*p)(5,10) << endl;
 	Test* p1 = &t2;
 	cout << (p1->*p)(7, 20) << endl;
-
 }
 ```
+### lambda函数
+一种匿名函数
+
+### casting
+#### const_cast<>()
+用于常量指针转化为变量指针
+#### dynamic_cast()
+基类指针转化为派生类指针，会检测是否可转化
+#### static_cast()
+常用
+#### reinterpret_cast
+强制指针转换
+
 ### while中使用赋值语句
 ```c++
+//赋值后a的值是否为0
 while(a=1){
 
 }
 ```
-### double的输出
-1保留有效位至多六位
-2科学计数法表示
