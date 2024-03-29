@@ -18,3 +18,17 @@ private:
 };
 
 ```
+## 输入输出运算符
+```c++
+class T{
+    int x;
+    int y;
+public:
+    friend ostream& operator<<(ostream &os,const &T t);
+};
+
+ostream& operator<<(ostream &os,const &T t){
+    os<<t.x<<t.y<<endl;
+
+}
+```
