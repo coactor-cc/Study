@@ -19,7 +19,6 @@ $$
 \because E(Y)=\frac{2}{n(n+1)}\sum_{i=1}^{n}iE(X_i)=\mu\\
 D(Y)=\frac{2^{2}}{n^{2}(n+1)^{2}}\sum_{i=1}^{n}i^{2}D(X_i)=\cdots\\
 P\{ |Y-\mu|<\varepsilon \}\geq 1-\frac{{D(Y)}}{\varepsilon ^{2}}\\
-
 \lim_{n\rightarrow +\infty}1-\frac{{D(Y)}}{\varepsilon ^{2}}=1-\frac{1}{\varepsilon ^{2}}\lim_{n\rightarrow +\infty}\frac{n(2n-3)}{3(n+1)}
 $$
  
@@ -65,7 +64,6 @@ $$
 E(F)=\mu;D(F)=\sigma^{2}\\
 \therefore E(\sum_{i=1}^{n}X_i)=n\mu;D(\sum_{i=1}^{n}X_i)=n\sigma^{2}\\
 \sum_{i=1}^{n}X_i\sim N(n\mu,n\sigma^{2})\\
-
 \overline{X}\sim N(\mu,\sigma^{2}/n)
 $$
 ### 拉普拉斯
